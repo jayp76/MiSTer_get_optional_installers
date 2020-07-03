@@ -35,7 +35,7 @@ function get_installers {
 
 
   [[ -d /media/fat/Scripts/installers ]] || mkdir -p /media/fat/Scripts/installers ; cd /media/fat/Scripts/installers
-   curl ${CURL_RETRY} --insecure -o ${2} ${3}
+   curl ${CURL_RETRY} --insecure -o ${1} ${2}
 }
 
 echo "Getting RetroDriven_Update_Suite"
