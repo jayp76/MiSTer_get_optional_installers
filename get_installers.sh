@@ -75,7 +75,7 @@ chmod +x *
 
 
 echo " ======================================================================="
-echo " Thanks goes to Locutus73,Retrodriven, theypsilon, bbond007             "
+echo " Thanks goes to Locutus73,Retrodriven, theypsilon, bbond007, retrobrews "
 
 
 echo "    _____  .__  ____________________           "
