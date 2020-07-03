@@ -71,7 +71,7 @@ get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update
 echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
-
+chmod +x *
 
 
 echo " ======================================================================="
