@@ -2,6 +2,9 @@
 
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
+# Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
+# Version 1.0 - no date - First commit
+
 
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
