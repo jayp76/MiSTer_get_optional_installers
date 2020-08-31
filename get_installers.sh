@@ -93,7 +93,7 @@ get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME
 chmod +x *
 
 echo "Getting Wiki"
-get_Wiki MiSTEr_Wiki.pdf https://github.com/jayp76/MiSTer_get_optional_installers/raw/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
+get_Wiki MiSTEr_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/raw/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
 
 
 echo " ======================================================================="
