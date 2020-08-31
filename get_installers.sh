@@ -42,6 +42,15 @@ function get_installers {
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
 }
 
+function get_Wiki {
+  echo " ======================================================================="
+  echo " Downloading Wiki into Help folder"
+
+
+  [[ -d /media/fat/help ]] || mkdir -p /media/fat/help ; cd /media/fat/help
+   curl ${CURL_RETRY} --insecure -o ${1} ${2}
+}
+
 echo "Getting RetroDriven_Update_Suite"
 get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
 
@@ -75,12 +84,16 @@ get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update
 echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
-chmod +x *
+
 
 # echo "Getting Boogerman Cannonball unofficial Port"
 # cd /media/fat
 # get_installers wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AuxYS48DkEy2xkqTBaIgMgcBw7cMW9T' -O cannonball.7z
 # Extract with 7zip, path schould be /media/fat/cannonball. Cannonball-OutRun.sh schould go into /media/fat/Scripts. I prefer /media/fat/Scripts/Games
+chmod +x *
+
+echo "Getting Wiki"
+get_Wiki MiSTEr_Wiki.pdf https://github.com/jayp76/MiSTer_get_optional_installers/raw/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
 
 
 echo " ======================================================================="
