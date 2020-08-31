@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# GET YARMUS!!!!
+
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -13,10 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Copyright 2019-2020 Alessandro "Locutus73" Miele
+# Copyright 2019-2020 Alessandro "Locutus73" Miele --- many thanks to Alessandro "Locutus73" Miele
 
 # You can download the latest version of this script from:
-# https://github.com/MiSTer-devel/Updater_script_MiSTer
+# https://github.com/jayp76/MiSTer_get_optional_installers
 
 # Version 1.0 - 2020-08-31 - First commit
 
