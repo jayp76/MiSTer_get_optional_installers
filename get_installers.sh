@@ -3,7 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
-# Version 1.0 - no date - First commit
+# Version 1.0 - 2020-07-03 - First commit
 
 
 URL="https://github.com"
