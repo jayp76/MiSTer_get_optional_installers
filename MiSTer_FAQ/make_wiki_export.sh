@@ -1,10 +1,12 @@
 #!/bin/bash
 # https://github.com/yakivmospan/github-wikito-converter
 
+# Version 1.0 - 2020-08-31 - First commit
+
 mkdir wiki_temp
 cd ./wiki_temp
 
-wget https://github.com/jayp76/MiSTer_get_optional_installers/raw/master/MiSTer_FAQ/misterkun_logo.png
+wget https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/misterkun_logo.png
 
 git clone https://github.com/MiSTer-devel/Main_MiSTer.wiki.git
 
