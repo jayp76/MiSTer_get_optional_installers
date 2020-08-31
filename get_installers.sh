@@ -50,7 +50,7 @@ function get_Wiki {
   echo " Downloading Wiki into Help folder"
 
 
-  [[ -d /media/fat/help ]] || mkdir -p /media/fat/help ; cd /media/fat/help
+  [[ -d /media/fat/#help ]] || mkdir -p /media/fat/#help ; cd /media/fat/#help
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
    echo " "
    echo "***"
@@ -103,6 +103,9 @@ get_Wiki MiSTEr_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_opt
 
 echo "Getting Wiki as HTML"
 get_Wiki MiSTEr_Wiki.html https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.html
+
+echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
+curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73,Retrodriven, theypsilon, bbond007, retrobrews "
