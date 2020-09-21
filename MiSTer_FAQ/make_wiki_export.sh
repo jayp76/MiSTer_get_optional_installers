@@ -15,4 +15,4 @@ gwtc -v -t "MiSTer Wiki" --logo-img misterkun_logo.png -n MiSTer_Wiki ./Main_MiS
 
 xz -z -v *.html
 
-mv MiSTer_Wiki.html.xz MiSTer_Wiki_"`date +%F`".html.xz
+#mv MiSTer_Wiki.html.xz MiSTer_Wiki_"`date +%F`".html.xz
