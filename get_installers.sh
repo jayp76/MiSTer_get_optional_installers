@@ -107,6 +107,7 @@ chmod +x *
 echo "Getting Wiki as HTML"
 #get_Wiki MiSTEr_Wiki.html https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.html
 get_Wiki MiSTEr_Wiki.html https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-09-21.html.xz
+rm -f *.html
 xz -d -v MiSTer_Wiki_2020-09-21.html.xz
 
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
