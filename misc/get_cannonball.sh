@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 [[ -d /media/fat/Cannonball ]] || mkdir -p /media/fat/Cannonball ; cd /media/fat/Cannonball
 echo "Getting Cannonball"
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AuxYS48DkEy2xkqTBaIgMgcBw7cMW9T' -O cannonball.7z
