@@ -43,5 +43,13 @@ It also depends heavily on your network connection (Router/Switch/WiFi).
 For large files it is better to use FTP/SCP/SFTP. You also have a "proper" progress bar when using one of these methods. 
 Just don't forget to transfer your files in binary mode when using FTP/SFTP.
 
+10) Mutliple MiSTErs on the same Network!
+You have to change the hostname and MAC Adress.
+There is a script and ini for the hostname in my github. It changes /etc/hosts and /etc/hostname.
+For MAC address change use the Script in your Scripts folder called mac_address_change.sh. It is part of the official updater script suite.
+Or you can find it here:
+https://github.com/MiSTer-devel/Scripts_MiSTer/
+
+
 
 
