@@ -113,8 +113,17 @@ echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
 curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
 echo " "
-   echo "***"
-   echo " "
+echo "***"
+echo " "
+
+echo "Getting DevilutionX from misterkun-io"
+echo "Put diabdat.mpq in Diablo folder. Also add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
+wget -qO- https://github.com/misterkun-io/MiSTer_DeViL/raw/master/releases/Arm-DevilutionX_0.5.0.zip | bsdtar -xvf- -C /media/fat/
+
+
+echo " "
+echo "***"
+echo " "
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73,Retrodriven, theypsilon, bbond007, retrobrews "
