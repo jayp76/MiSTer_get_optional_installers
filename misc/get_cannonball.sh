@@ -3,6 +3,7 @@
 echo "Getting Cannonball"
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AuxYS48DkEy2xkqTBaIgMgcBw7cMW9T' -O cannonball.7z
 curl -LJO --insecure https://raw.githubusercontent.com/develar/7zip-bin//master/linux/arm/7za
+cd /media/fat/Cannonball
 chmod +x 7za
 ./7za x ./cannonball.7z
 cp ./Cannonball-OutRun.sh /media/fat/Scripts
