@@ -3,7 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
-# Version 1.2 - 2020-08-31 - added DevilutionX
+# Version 1.2 - 2020-08-31 - added DevilutionX and Cannonball Ports
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
 # Version 1.0 - 2020-07-03 - First commit
 
@@ -95,14 +95,8 @@ get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update
 echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
-
 echo "Getting Boogerman Cannonball unofficial Port"
-# cd /media/fat
-# wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AuxYS48DkEy2xkqTBaIgMgcBw7cMW9T' -O cannonball.7z
-# Extract with 7zip, path schould be /media/fat/cannonball. Cannonball-OutRun.sh schould go into /media/fat/Scripts. I prefer /media/fat/Scripts/Games
 get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cannonball.sh
-
-chmod +x *
 
 # echo "Getting Wiki as PDF"
 # get_Wiki MiSTEr_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
