@@ -5,25 +5,26 @@ or MisterFusion Image https://github.com/MiSTer-devel/mr-fusion/releases
 2) Updading MiSTer Linux System:
 Since it is unreliable to update via update script when MiSTer system is running, it's best to shutdown and use the SD Card installer and update boot files.
 
-3) Recovering after failed update via update Script:
+3) Recovering after update via update Script if your MiSTEr cannot boot anymore:
 Use SD Card installer and update boot files to recover your system.
 
 4) Use a generic BT dongle or 8bitdo dongle?
 It depends. With a generic BT dongle you can pair multiple controllers.
-With 8bitdo pair just on controller, but pairing is a bit more user firendly by pushing the sync button on dongle and controller. 
-It has also some features like changing D-Input mode to X-Input mode, and many more. These are mostly irrelevant in MiSTEr an can cause confusion.
+With 8bitdo pair just on controller, but pairing is a bit more user firendly by pushing the sync button on dongle and controller. But you have to have multiple 8bitdo dongles for each used controller. 
+It has also some features like changing D-Input mode to X-Input mode, and many more. These are mostly irrelevant in MiSTEr and can cause confusion.
 
 5) 8bitdo controllers don not work after MiSTer 20200908 linux update:
 Your controller is probably in "Switch" mode. Use "X-Input" or "D-Input" instead until a fix might be available in the future.
 
 6) Which updater Script schould i use?
 Firstly you should use the official one as a starting point. https://github.com/MiSTer-devel/Updater_script_MiSTer -> update.sh
-All other updaters are optional, but still a good time saver. Check which features the installers have.
+All other updaters are optional, but still a good time saver. Check which features the installers have and choose.
 
 7) I want to use an older core, but don't want it to be overwritten via the updater script.
-You probably can also do this via the updater script by modifying the ini file. But for some people this might be intimidating. 
-Alternatively you could make an new Folder on the MiSTer "root" (/media/fat) for e.g. "_old_cores". You have to use a leading underscore.
-Or use the "_OTHER" folder if already available. Folders without a leading underscore are not visible in MiSTer Menu.
+You probably can  do this via the updater script by modifying the ini file. But for some people this might be intimidating. 
+Alternatively you could make an new Folder on the MiSTer "root" (/media/fat) for e.g. "_old_cores". 
+Or use the "_OTHER" folder if already available. 
+You have to use a leading underscore. Folders without a leading underscore are not visible in MiSTer Menu.
 
 8) How do i get the latest MiSTer.ini file, without losing my user settings?
 Add following line into your update.ini:
