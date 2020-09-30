@@ -96,10 +96,11 @@ echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
 
-# echo "Getting Boogerman Cannonball unofficial Port"
+echo "Getting Boogerman Cannonball unofficial Port"
 # cd /media/fat
 # wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AuxYS48DkEy2xkqTBaIgMgcBw7cMW9T' -O cannonball.7z
 # Extract with 7zip, path schould be /media/fat/cannonball. Cannonball-OutRun.sh schould go into /media/fat/Scripts. I prefer /media/fat/Scripts/Games
+get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cannonball.sh
 
 chmod +x *
 
