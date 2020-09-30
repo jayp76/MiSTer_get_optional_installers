@@ -3,7 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
-# Version 1.2 - 2020-08-31 - added DevilutionX and Cannonball Ports
+# Version 1.2 - 2020-09-30 - added DevilutionX and Cannonball Ports, Best practice help text
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
 # Version 1.0 - 2020-07-03 - First commit
 
@@ -105,6 +105,10 @@ echo "Getting Wiki as HTML"
 #get_Wiki MiSTEr_Wiki.html https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.html
 get_Wiki MiSTer_Wiki.html.xz https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki.html.xz
 /bin/xz -d -v -f MiSTer_Wiki.html.xz
+
+echo "Get Best Practice tips into your #help folder"
+get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/MiSTer_Best_Practice_for_installing_and_updating.txt
+
 
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
 curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(date +"%Y_%m_%d").txt
