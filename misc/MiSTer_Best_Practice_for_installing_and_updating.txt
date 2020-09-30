@@ -23,15 +23,24 @@ All other updaters are optional, but still a good time saver. Check which featur
 7) I want to use an older core, but don't want it to be overwritten via the updater script.
 You probably can also do this via the updater script by modifying the ini file. But for some people this might be intimidating. 
 Alternatively you could make an new Folder on the MiSTer "root" (/media/fat) for e.g. "_old_cores". You have to use a leading underscore.
-Or use the "_OTHER" folder if already available. 
+Or use the "_OTHER" folder if already available. Folders without a leading underscore are not visible in MiSTer Menu.
 
 8) How do i get the latest MiSTer.ini file, without losing my user settings?
 Add following line into your update.ini:
 
 ADDITIONAL_REPOSITORIES+=( "https://github.com/MiSTer-devel/Main_MiSTer|ini|$BASE_PATH/ini_examples" )
 
-This downloads the latest MiSTer.ini to the "ini_examples" folder. Then you can compare which options were added/updated. 
-You pick which ones are usefule for your setup and add them to your current MiSTer.ini file.
+This downloads the latest MiSTer.ini to the "ini_examples" folder. Then you can compare this example ini file with your current ini and check which options were added/updated/deleted/obsolete. 
+You pick which ones are usefull for your setup and add them to your current MiSTer.ini file.
 
-9)
+9) Which method schould i use to upload files to my MiSTer?
+It depends what you want to achive. Maybe the fastest and user friendly method is to activate a Samba share on your MiSTer.
+If you want to secure your MiSTer you probably should consider changing the root password and transfer files via SCP or SFTP and disable Samba share.
+My personal experience for transferring small files is, that Samba file share is fine, but not for big files. 
+It is wonky transferring files from Win10 and progress bar seems to be frozen.
+It also depends heavily on your network connection (Router/Switch/WiFi).
+For large files it is better to use FTP/SCP/SFTP. You also have a "proper" progress bar when using one of these methods. 
+Just don't forget to transfer your files in binary mode when using FTP/SFTP.
+
+
 
