@@ -8,3 +8,4 @@ chmod +x 7za
 cp ./Cannonball-OutRun.sh /media/fat/Scripts
 mv ./Cannonball-OutRun.sh /media/fat/Scripts/Games
 rm /media/fat/cannonball.7z
+rm /media/fat/7za
