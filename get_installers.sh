@@ -116,9 +116,9 @@ echo " "
 echo "***"
 echo " "
 
-#echo "Getting DevilutionX from misterkun-io"
-#echo "Put diabdat.mpq in Diablo folder. Also add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
-#wget -qO- https://github.com/misterkun-io/MiSTer_DeViL/raw/master/releases/Arm-DevilutionX_0.5.0.zip | bsdtar -xvf- -C /media/fat/
+echo "Getting DevilutionX from misterkun-io"
+echo "Put diabdat.mpq in Diablo folder. Also add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
+get_installers install_devilutionx.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/install_devilutionx.sh
 
 
 echo " "
