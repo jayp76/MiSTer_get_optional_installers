@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wget -qO- https://github.com/misterkun-io/MiSTer_DeViL/raw/master/releases/Arm-DevilutionX_0.5.0.zip | bsdtar -xvf- -C /media/fat/
+wget -qO- https://archive.org/download/cave-story-mister-fpga/Cave_Story_MiSTer.zip | bsdtar -xvf- -C /media/fat/
