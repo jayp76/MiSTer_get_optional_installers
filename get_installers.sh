@@ -131,7 +131,8 @@ echo "***"
 echo " "
 
 echo " ======================================================================="
-echo " Thanks goes to Locutus73,Retrodriven, theypsilon, bbond007, retrobrews "
+echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
+echo " Boogerman, Owlnonymous, EXL "
 
 
 echo "    _____  .__  ____________________           "
