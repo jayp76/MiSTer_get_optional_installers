@@ -92,5 +92,6 @@ curl \
 	"${SCRIPT_URL}?raw=true" | \
 	bash -
 
+echo " "
 
 exit 0
