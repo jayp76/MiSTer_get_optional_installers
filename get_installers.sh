@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.3 - 2020-10-12 - added NX-Engine Cave Story port
 # Version 1.2 - 2020-09-30 - added DevilutionX and Cannonball Ports, Best practice help text
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
 # Version 1.0 - 2020-07-03 - First commit
@@ -97,6 +98,9 @@ get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME
 
 echo "Getting Boogerman Cannonball unofficial Port"
 get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cannonball.sh
+
+echo "Getting EXL/NX-Engine Cave Story Port"
+get_installers get_cave.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cave.sh
 
 # echo "Getting Wiki as PDF"
 # get_Wiki MiSTEr_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
