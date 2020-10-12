@@ -50,6 +50,9 @@ For MAC address change use the Script in your Scripts folder called mac_address_
 Or you can find it here:
 https://github.com/MiSTer-devel/Scripts_MiSTer/
 
-
+11) Probably you configured your navigation button "OK" and "Back" on MiSTer on Joypad buttony "B/X" and "A/O" or somithing similar.
+This might be problematic if you want to use Hybrid Apps like the ScummVM MiSTer port, which runs on the Linux side of MiSTer.
+If "Back" is on "B", you can't map for e.g Jump on "B", because it is already taken by "Back" and acts like escape and extis your application.
+So you might want to consider to remap your navigations scheme for this use case.
 
 
