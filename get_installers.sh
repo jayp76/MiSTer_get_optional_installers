@@ -63,6 +63,8 @@ function get_Wiki {
    echo " "
 }
 
+# Updaters
+
 echo "Getting RetroDriven_Update_Suite"
 get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
 
@@ -78,6 +80,12 @@ echo "Getting RetroDriven Update_MiSTerBIOS and .ini"
 get_installers Update_MiSTerBIOS.sh https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.sh
 get_installers Update_MiSTerBIOS.ini https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.ini
 
+echo "Getting theypsilon update_all"
+get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
+
+
+# Installers
+
 echo "Getting Homebrew Pack Installer (Retrobrew)"
 get_installers get_homebrews.sh https://raw.githubusercontent.com/jayp76/installers/testing/%23get_homebrews.sh
 
@@ -90,11 +98,9 @@ get_installers PrBoom-Plus_Installer.sh https://raw.githubusercontent.com/bbond0
 echo "Getting bbond007 MiSTer_BasiliskII"
 get_installers Install_BasiliskII.sh https://raw.githubusercontent.com/bbond007/MiSTer_BasiliskII/master/Install_BasiliskII.sh
 
-echo "Getting theypsilon update_all"
-get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
-
-echo "Getting theypsilon update_arcade-organizer"
-get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
+echo "Getting DevilutionX from misterkun-io"
+echo "Put diabdat.mpq in Diablo folder. Optinally add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
+get_installers install_devilutionx.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/install_devilutionx.sh
 
 echo "Getting Boogerman Cannonball unofficial Port"
 get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cannonball.sh
@@ -102,28 +108,21 @@ get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer
 echo "Getting EXL/NX-Engine Cave Story Port"
 get_installers get_cave.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cave.sh
 
-# echo "Getting Wiki as PDF"
-# get_Wiki MiSTEr_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.pdf
+# Help and FAQ documents
 
 echo "Getting Wiki as HTML"
-#get_Wiki MiSTEr_Wiki.html https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki_2020-08-31.html
 get_Wiki MiSTer_Wiki.html.xz https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki.html.xz
 /bin/xz -d -v -f MiSTer_Wiki.html.xz
 
 echo "Get Best Practice tips into your #help folder"
 get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Best_Practice_for_installing_and_updating.txt
 
-
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
 curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
-echo " "
-echo "***"
-echo " "
-
-echo "Getting DevilutionX from misterkun-io"
-echo "Put diabdat.mpq in Diablo folder. Optinally add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
-get_installers install_devilutionx.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/install_devilutionx.sh
+# Arcade Organizer
+echo "Getting theypsilon update_arcade-organizer"
+get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
 
 echo " "
