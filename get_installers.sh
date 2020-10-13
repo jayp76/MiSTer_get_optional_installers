@@ -111,7 +111,7 @@ get_Wiki MiSTer_Wiki.html.xz https://raw.githubusercontent.com/jayp76/MiSTer_get
 /bin/xz -d -v -f MiSTer_Wiki.html.xz
 
 echo "Get Best Practice tips into your #help folder"
-get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/MiSTer_Best_Practice_for_installing_and_updating.txt
+get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Best_Practice_for_installing_and_updating.txt
 
 
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
