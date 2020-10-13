@@ -132,7 +132,7 @@ echo " "
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
 echo " Boogerman, Owlnonymous, EXL "
-
+echo " "
 
 echo "    _____  .__  ____________________           "
 echo "   /     \ |__|/   _____/\__    ___/__________ "
