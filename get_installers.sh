@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.4 - 2021-01-21 - added flynnsbit eXoDOS Top 300 for ao486
 # Version 1.3 - 2020-10-12 - added NX-Engine Cave Story port
 # Version 1.2 - 2020-09-30 - added DevilutionX and Cannonball Ports, Best practice help text
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
