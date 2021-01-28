@@ -124,6 +124,10 @@ curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(dat
 echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 
+# flynnsbit eXoDOS Top 300
+echo "Getting flynnsbit eXoDOS Top 300 for ao486"
+get_installers AO486_Update_Top300_Pack.sh https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.sh
+
 
 echo " "
 echo "***"
@@ -131,7 +135,7 @@ echo " "
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
-echo " Boogerman, Owlnonymous, EXL "
+echo " Boogerman, Owlnonymous, EXL, flynnsbit "
 echo " "
 
 echo "    _____  .__  ____________________           "
