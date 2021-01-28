@@ -41,6 +41,7 @@ case $? in
 esac
 
 echo " Yarmus Version 1.4 "
+sleep 4
 
 function get_installers {
   echo " ======================================================================="
