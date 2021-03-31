@@ -76,7 +76,7 @@ function get_attract {
 
   [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
+   unzip -j -o /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
    rm /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
    echo " "
    echo "***"
@@ -90,7 +90,7 @@ function get_xow {
 
   [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j /media/fat/Scripts/xow/xow.zip
+   unzip -j -o /media/fat/Scripts/xow/xow.zip
    mv xow xow_init_script /media/fat/linux
    rm /media/fat/Scripts/xow/xow.zip
    echo " "
