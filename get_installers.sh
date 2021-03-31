@@ -75,8 +75,8 @@ function get_attract {
 
   [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
-   unzip /media/fat/Scripts/Attract_Mode/main.zip
-   rm /media/fat/Scripts/Attract_Mode/main.zip
+   #unzip /media/fat/Scripts/Attract_Mode/main.zip
+   #rm /media/fat/Scripts/Attract_Mode/main.zip
    echo " "
    echo "***"
    echo " "
