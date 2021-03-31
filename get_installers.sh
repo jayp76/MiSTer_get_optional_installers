@@ -170,7 +170,7 @@ get_attract Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attrac
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
-get_attract xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ 
+get_xow xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ 
 
 echo " "
 echo "***"
