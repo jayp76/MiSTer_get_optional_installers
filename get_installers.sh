@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
 # Version 1.4 - 2021-01-28 - added flynnsbit eXoDOS Top 300 for ao486
 # Version 1.3 - 2020-10-12 - added NX-Engine Cave Story port
 # Version 1.2 - 2020-09-30 - added DevilutionX and Cannonball Ports, Best practice help text
@@ -40,7 +41,7 @@ case $? in
 		;;
 esac
 
-echo " Yarmus Version 1.4 "
+echo " Yarmus Version 1.5 "
 sleep 4
 
 function get_installers {
@@ -74,7 +75,7 @@ function get_attract {
 
   [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
-   unzip main.zip
+   unzip /media/fat/Scripts/Attract_Mode/main.zip
    rm /media/fat/Scripts/Attract_Mode/main.zip
    echo " "
    echo "***"
