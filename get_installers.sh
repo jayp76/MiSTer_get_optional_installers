@@ -90,9 +90,9 @@ function get_xow {
 
   [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j /media/fat/Scripts/Attract_Mode/xow.zip
+   unzip -j /media/fat/Scripts/xow/xow.zip
    mv xow xow_init_script /media/fat/linux
-   rm /media/fat/Scripts/Attract_Mode/xow.zip
+   rm /media/fat/Scripts/xow/xow.zip
    echo " "
    echo "***"
    echo " "
