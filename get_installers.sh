@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
 # Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
 # Version 1.4 - 2021-01-28 - added flynnsbit eXoDOS Top 300 for ao486
 # Version 1.3 - 2020-10-12 - added NX-Engine Cave Story port
@@ -41,7 +42,7 @@ case $? in
 		;;
 esac
 
-echo " Yarmus Version 1.5 "
+echo " Yarmus Version 1.5a "
 sleep 4
 
 function get_installers {
@@ -77,6 +78,21 @@ function get_attract {
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
    unzip -j /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
    rm /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
+   echo " "
+   echo "***"
+   echo " "
+}
+
+function get_xow {
+  echo " ======================================================================="
+  echo " Downloading xow_MiSTer"
+
+
+  [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
+   unzip -j /media/fat/Scripts/Attract_Mode/xow.zip
+   mv xow xow_init_script /media/fat/linux
+   rm /media/fat/Scripts/Attract_Mode/xow.zip
    echo " "
    echo "***"
    echo " "
@@ -151,6 +167,10 @@ get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/fl
 # Mister Arcade Attract Mode
 echo "Getting Mister Arcade Attract Mode from mrchrisster"
 get_attract Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ 
+
+# xow_Mister 
+echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
+get_attract xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ 
 
 echo " "
 echo "***"
