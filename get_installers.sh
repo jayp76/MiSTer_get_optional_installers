@@ -67,6 +67,20 @@ function get_Wiki {
    echo " "
 }
 
+function get_attract {
+  echo " ======================================================================="
+  echo " Downloading Mister Arcade Attract Mode"
+
+
+  [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
+   curl ${CURL_RETRY} --insecure -o ${1} ${2}
+   unzip main.zip
+   rm /media/fat/Scripts/Attract_Mode/main.zip
+   echo " "
+   echo "***"
+   echo " "
+}
+
 # Updaters
 
 echo "Getting RetroDriven_Update_Suite"
@@ -131,7 +145,11 @@ get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME
 # flynnsbit eXoDOS Top 300
 echo "Getting flynnsbit eXoDOS Top 300 for ao486"
 get_installers AO486_Update_Top300_Pack.sh https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.sh
+get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.ini
 
+# Mister Arcade Attract Mode
+echo "Getting Mister Arcade Attract Mode from mrchrisster"
+get_attract main.zip https://github.com/mrchrisster/mister-arcade-attract/archive/refs/heads/main.zip 
 
 echo " "
 echo "***"
@@ -139,7 +157,7 @@ echo " "
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
-echo " Boogerman, Owlnonymous, EXL, flynnsbit "
+echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster "
 echo " "
 
 echo "    _____  .__  ____________________           "
