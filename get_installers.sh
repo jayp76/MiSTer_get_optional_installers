@@ -74,9 +74,9 @@ function get_attract {
 
 
   [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
-   curl ${CURL_RETRY} --insecure -o ${1} ${2}
-   #unzip /media/fat/Scripts/Attract_Mode/main.zip
-   #rm /media/fat/Scripts/Attract_Mode/main.zip
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
+   unzip /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
+   rm /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
    echo " "
    echo "***"
    echo " "
@@ -150,7 +150,7 @@ get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/fl
 
 # Mister Arcade Attract Mode
 echo "Getting Mister Arcade Attract Mode from mrchrisster"
-get_attract main.zip https://github.com/mrchrisster/mister-arcade-attract/archive/refs/heads/main.zip 
+get_attract Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ 
 
 echo " "
 echo "***"
