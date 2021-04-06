@@ -90,7 +90,7 @@ function get_xow {
 
 
   [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2} ${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
    unzip -j -o /media/fat/Scripts/${3}/xow.zip
    mv xow xow_init_script /media/fat/linux
    rm /media/fat/Scripts/${3}/xow.zip
@@ -105,7 +105,7 @@ function get_duke {
 
 
   [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2} ${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
    unzip -j -o /media/fat/Scripts/${3}/MiSTer_Duke.zip
    mv duke_init_script /media/fat/linux
    rm /media/fat/Scripts/${3}/MiSTer_Duke.zip
