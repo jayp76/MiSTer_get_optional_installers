@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.5c - 2021-04-06 - Code optimizations
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
 # Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
 # Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
@@ -12,7 +13,8 @@
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
 # Version 1.0 - 2020-07-03 - First commit
 
-BASE_DIR="/media/fat"  #${BASE_DIR}
+BASE_DIR="/media/fat"  		#${BASE_DIR}
+SVERSION="1.5c"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -43,7 +45,7 @@ case $? in
 		;;
 esac
 
-echo " Yarmus Version 1.5b "
+echo " Yarmus Version ${SVERSION} "
 sleep 4
 
 function get_installers {
@@ -51,7 +53,7 @@ function get_installers {
   echo " Downloading installer scripts, please wait..."
 
 
-  [[ -d /media/fat/Scripts/installers ]] || mkdir -p /media/fat/Scripts/installers ; cd /media/fat/Scripts/installers
+  [[ -d ${BASE_DIR}/Scripts/installers ]] || mkdir -p ${BASE_DIR}/Scripts/installers ; cd ${BASE_DIR}/Scripts/installers
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
    echo " "
    echo "***"
@@ -63,56 +65,27 @@ function get_Wiki {
   echo " Downloading Wiki into Help folder"
 
 
-  [[ -d /media/fat/#help ]] || mkdir -p /media/fat/#help ; cd /media/fat/#help
+  [[ -d ${BASE_DIR}/#help ]] || mkdir -p ${BASE_DIR}/#help ; cd ${BASE_DIR}/#help
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
    echo " "
    echo "***"
    echo " "
 }
 
-function get_attract {
+function get_addons {
   echo " ======================================================================="
-  echo " Downloading Mister Arcade Attract Mode"
-
-
-  [[ -d /media/fat/Scripts/Attract_Mode ]] || mkdir -p /media/fat/Scripts/Attract_Mode ; cd /media/fat/Scripts/Attract_Mode
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j -o /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
-   rm /media/fat/Scripts/Attract_Mode/Attract_Mode.zip
-   echo " "
-   echo "***"
-   echo " "
-}
-
-function get_xow {
-  echo " ======================================================================="
-  echo " Downloading xow_MiSTer"
-
-
-  [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j -o /media/fat/Scripts/${3}/xow.zip
-   mv xow xow_init_script /media/fat/linux
-   rm /media/fat/Scripts/${3}/xow.zip
-   echo " "
-   echo "***"
-   echo " "
-}
-
-function get_duke {
-  echo " ======================================================================="
-  echo " Downloading MiSTer_Duke "
+  echo " Downloading Addons"
 
 
   [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j -o /media/fat/Scripts/${3}/MiSTer_Duke.zip
-   mv duke_init_script /media/fat/linux
-   rm /media/fat/Scripts/${3}/MiSTer_Duke.zip
+   unzip -j -o ${BASE_DIR}/Scripts/${3}/${1}
+   rm ${BASE_DIR}/Scripts/${3}/${1}
    echo " "
    echo "***"
    echo " "
 }
+
 
 # Updaters
 
@@ -169,7 +142,7 @@ echo "Get Best Practice tips into your #help folder"
 get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Best_Practice_for_installing_and_updating.txt
 
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
-curl -ksLf https://pastebin.com/raw/pM1XMe5E > /media/fat/#help/cheatsheet_$(date +"%Y_%m_%d").txt
+curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
 # Arcade Organizer
 echo "Getting theypsilon update_arcade-organizer"
@@ -180,17 +153,21 @@ echo "Getting flynnsbit eXoDOS Top 300 for ao486"
 get_installers AO486_Update_Top300_Pack.sh https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.sh
 get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.ini
 
+# more addons 
+
 # Mister Arcade Attract Mode
 echo "Getting Mister Arcade Attract Mode from mrchrisster"
-get_attract Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ 
+get_addons Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ Attract_Mode
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
-get_xow xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
+get_addons xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
+mv xow xow_init_script ${BASE_DIR}/linux
 
 # MiSTer_Duke
 echo "Getting Hyperkin Duke controller support for the MiSTer FPGA"
-get_duke MiSTer_Duke.zip https://github.com/Mellified/MiSTer_Duke/zipball/main/ MiSTer_Duke
+get_addons MiSTer_Duke.zip https://github.com/Mellified/MiSTer_Duke/zipball/main/ MiSTer_Duke
+mv duke_init_script ${BASE_DIR}/linux
 
 
 
@@ -200,7 +177,7 @@ echo " "
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
-echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster "
+echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified "
 echo " "
 
 echo "    _____  .__  ____________________           "
