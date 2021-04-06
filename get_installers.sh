@@ -3,7 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
-# Version 1.5c - 2021-04-06 - Code optimizations
+# Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
 # Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
 # Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
@@ -89,20 +89,20 @@ function get_addons {
 
 # Updaters
 
-echo "Getting RetroDriven_Update_Suite"
-get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
+#echo "Getting RetroDriven_Update_Suite"
+#get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
 
-echo "Getting RetroDriven_MAME_SE and .ini"
-get_installers Update_RetroDriven_MAME_SE.sh https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.sh
-get_installers Update_RetroDriven_MAME_SE.ini https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.ini
+#echo "Getting RetroDriven_MAME_SE and .ini"
+#get_installers Update_RetroDriven_MAME_SE.sh https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.sh
+#get_installers Update_RetroDriven_MAME_SE.ini https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.ini
 
 echo "Getting RetroDriven Update_MiSTerWallpapers and .ini"
 get_installers Update_MiSTerWallpapers.sh https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.sh
 get_installers Update_MiSTerWallpapers.ini https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.ini
 
-echo "Getting RetroDriven Update_MiSTerBIOS and .ini"
-get_installers Update_MiSTerBIOS.sh https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.sh
-get_installers Update_MiSTerBIOS.ini https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.ini
+#echo "Getting RetroDriven Update_MiSTerBIOS and .ini"
+#get_installers Update_MiSTerBIOS.sh https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.sh
+#get_installers Update_MiSTerBIOS.ini https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.ini
 
 echo "Getting theypsilon update_all"
 get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
