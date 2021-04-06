@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
 # Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
 # Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
 # Version 1.4 - 2021-01-28 - added flynnsbit eXoDOS Top 300 for ao486
@@ -11,7 +12,7 @@
 # Version 1.1 - 2020-08-31 - added MiSTer Wiki download to #help folder and Owlnonymous Cheatsheet
 # Version 1.0 - 2020-07-03 - First commit
 
-
+BASE_DIR="/media/fat"  #${BASE_DIR}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -42,7 +43,7 @@ case $? in
 		;;
 esac
 
-echo " Yarmus Version 1.5a "
+echo " Yarmus Version 1.5b "
 sleep 4
 
 function get_installers {
@@ -89,10 +90,25 @@ function get_xow {
 
 
   [[ -d /media/fat/Scripts/xow ]] || mkdir -p /media/fat/Scripts/xow ; cd /media/fat/Scripts/xow
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j -o /media/fat/Scripts/xow/xow.zip
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2} ${3}
+   unzip -j -o /media/fat/Scripts/${3}/xow.zip
    mv xow xow_init_script /media/fat/linux
-   rm /media/fat/Scripts/xow/xow.zip
+   rm /media/fat/Scripts/${3}/xow.zip
+   echo " "
+   echo "***"
+   echo " "
+}
+
+function get_duke {
+  echo " ======================================================================="
+  echo " Downloading MiSTer_Duke "
+
+
+  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2} ${3}
+   unzip -j -o /media/fat/Scripts/${3}/MiSTer_Duke.zip
+   mv duke_init_script /media/fat/linux
+   rm /media/fat/Scripts/${3}/MiSTer_Duke.zip
    echo " "
    echo "***"
    echo " "
@@ -170,7 +186,13 @@ get_attract Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attrac
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
-get_xow xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ 
+get_xow xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
+
+# MiSTer_Duke
+echo "Getting Hyperkin Duke controller support for the MiSTer FPGA"
+get_duke MiSTer_Duke.zip https://github.com/Mellified/MiSTer_Duke/zipball/main/ MiSTer_Duke
+
+
 
 echo " "
 echo "***"
