@@ -51,9 +51,18 @@ For MAC address change use the Script in your Scripts folder called mac_address_
 Or you can find it here:
 https://github.com/MiSTer-devel/Scripts_MiSTer/
 
-11) Probably you configured your navigation button "OK" and "Back" on MiSTer on Joypad buttony "B/X" and "A/O" or somithing similar.
+11) If you want a new MAC Address and Fast_USB_Polling, then don't write it manually in the u-boot.txt file.
+Use first mac_address_change.sh script, then the fast_USB_polling_on.sh script. This ensures the the proper line feed is inserted in the u-boot.txt file.
+
+12) Probably you configured your navigation button "OK" and "Back" on MiSTer on Joypad buttony "B/X" and "A/O" or somithing similar.
 This might be problematic if you want to use Hybrid Apps like the ScummVM MiSTer port, which runs on the Linux side of MiSTer.
 If "Back" is on "B", you can't map for e.g Jump on "B", because it is already taken by "Back" and acts like escape and extis your application.
 So you might want to consider to remap your navigations scheme for this use case.
 
+13) If your fast_USB_polling_on.sh fails to execute with the message "This script must be run on MiSTer system.", you probably changed your MiSTer's hostname.
+Either comment out following section, or change the name according to your host name. I also applies to fast_USB_polling_off.sh.
+
+if os.uname()[1] != "MiSTer":
+    print ("This script must be run on a MiSTer system.")
+    sys.exit(1)
 
