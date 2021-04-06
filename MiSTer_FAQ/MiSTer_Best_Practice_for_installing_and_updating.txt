@@ -6,7 +6,7 @@ or MisterFusion Image https://github.com/MiSTer-devel/mr-fusion/releases
 Since it is unreliable to update via update script when MiSTer system is running, it's best to shutdown and use the SD Card installer and update boot files.
 Alternatevely, after you did an update with the updaterscript, open the MiSTER console or SSH and execute "updateboot" and reboot your MiSTer.
 
-3) Recovering after update via update Script if your MiSTEr cannot boot anymore:
+3) Recovering after update via update Script if your MiSTer cannot boot anymore:
 Use SD Card installer and update boot files to recover your system.
 
 4) Use a generic BT dongle or 8bitdo dongle?
