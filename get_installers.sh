@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
 # Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
 # Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
@@ -14,7 +15,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="1.5c"			#${SVERSION}
+SVERSION="1.6"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -144,6 +145,9 @@ get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.github
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
 curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
+echo "MiSTer Manual from adreeve"
+get_Wiki MISTer_Manual.pdf "https://raw.githubusercontent.com/adreeve/MiSTerManual/master/MISTer Manual.pdf"
+
 # Arcade Organizer
 echo "Getting theypsilon update_arcade-organizer"
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
@@ -177,7 +181,7 @@ echo " "
 
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
-echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified "
+echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified, adreeve"
 echo " "
 
 echo "    _____  .__  ____________________           "
