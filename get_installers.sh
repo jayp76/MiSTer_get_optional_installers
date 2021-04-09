@@ -146,7 +146,7 @@ echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
 curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/#help/cheatsheet_$(date +"%Y_%m_%d").txt
 
 echo "MiSTer Manual from adreeve"
-get_Wiki MISTer_Manual.pdf "https://raw.githubusercontent.com/adreeve/MiSTerManual/master/MISTer Manual.pdf"
+get_Wiki MISTer_Manual.pdf 'https://raw.githubusercontent.com/adreeve/MiSTerManual/master/MISTer Manual.pdf'
 
 # Arcade Organizer
 echo "Getting theypsilon update_arcade-organizer"
