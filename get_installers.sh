@@ -4,6 +4,7 @@
 #
 
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
+#			   - added NES Attracr Mode
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
 # Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
@@ -167,6 +168,10 @@ get_addons Attract_Arcade.zip https://github.com/mrchrisster/mister-arcade-attra
 # Mister Attract Mode
 echo "Getting Mister Attract Mode from mrchrisster"
 get_addons Attract_Mode.zip https://github.com/mrchrisster/attract_mode/zipball/main/ Attract_Mode
+
+# Mister Attract Mode
+echo "Getting Mister NES Attract Mode from mrchrisster"
+get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zipball/main/ Attract_NES
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
