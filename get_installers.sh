@@ -87,6 +87,7 @@ function get_addons {
    echo " "
    echo "***"
    echo " "
+   sleep 5
 }
 
 
