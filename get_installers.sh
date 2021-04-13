@@ -182,7 +182,7 @@ get_addons Attract_Mode.zip https://github.com/mrchrisster/attract_mode/zipball/
 
 # Mister Attract Mode
 echo "Getting Mister NES Attract Mode from mrchrisster"
-get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zipball/main/ Attract_NES
+get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zipball/master/ Attract_NES
 
 
 
