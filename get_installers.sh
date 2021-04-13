@@ -162,6 +162,16 @@ get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/fl
 
 # more addons 
 
+# xow_Mister 
+echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
+get_addons xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
+mv xow xow_init_script ${BASE_DIR}/linux
+
+# MiSTer_Duke
+echo "Getting Hyperkin Duke controller support for the MiSTer FPGA"
+get_addons MiSTer_Duke.zip https://github.com/Mellified/MiSTer_Duke/zipball/main/ MiSTer_Duke
+mv duke_init_script ${BASE_DIR}/linux
+
 # Mister Arcade Attract Mode
 echo "Getting Mister Arcade Attract Mode from mrchrisster"
 get_addons Attract_Arcade.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ Attract_Arcade
@@ -174,15 +184,7 @@ get_addons Attract_Mode.zip https://github.com/mrchrisster/attract_mode/zipball/
 echo "Getting Mister NES Attract Mode from mrchrisster"
 get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zipball/main/ Attract_NES
 
-# xow_Mister 
-echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
-get_addons xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
-mv xow xow_init_script ${BASE_DIR}/linux
 
-# MiSTer_Duke
-echo "Getting Hyperkin Duke controller support for the MiSTer FPGA"
-get_addons MiSTer_Duke.zip https://github.com/Mellified/MiSTer_Duke/zipball/main/ MiSTer_Duke
-mv duke_init_script ${BASE_DIR}/linux
 
 
 
