@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
 # Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
@@ -15,7 +16,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="1.6"			#${SVERSION}
+SVERSION="1.7"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -161,7 +162,11 @@ get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/fl
 
 # Mister Arcade Attract Mode
 echo "Getting Mister Arcade Attract Mode from mrchrisster"
-get_addons Attract_Mode.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ Attract_Mode
+get_addons Attract_Arcade.zip https://github.com/mrchrisster/mister-arcade-attract/zipball/main/ Attract_Arcade
+
+# Mister Attract Mode
+echo "Getting Mister Attract Mode from mrchrisster"
+get_addons Attract_Mode.zip https://github.com/mrchrisster/attract_mode/zipball/main/ Attract_Mode
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
