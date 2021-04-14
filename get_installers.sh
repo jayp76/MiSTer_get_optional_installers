@@ -4,7 +4,7 @@
 #
 
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
-#			   - added NES Attracr Mode
+#			   - added NES Attract Mode
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
 # Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
 # Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
