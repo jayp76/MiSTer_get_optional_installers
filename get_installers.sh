@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.8 - 2021-04-26 - added Super Attract Mode from mrchrisster
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
 #			   - added NES Attract Mode
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
@@ -183,6 +184,11 @@ get_addons Attract_Mode.zip https://github.com/mrchrisster/attract_mode/zipball/
 # Mister Attract Mode
 echo "Getting Mister NES Attract Mode from mrchrisster"
 get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zipball/master/ Attract_NES
+
+# Super Attract Mode
+echo "Getting Super Attract Mode from mrchrisster"
+get_addons MiSTer_SAM.zip https://github.com/mrchrisster/MiSTer_SAM/zipball/main/ MiSTer_SAM
+mv MiSTer_SAM .MiSTer_SAM
 
 
 
