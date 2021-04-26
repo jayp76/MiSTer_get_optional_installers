@@ -188,7 +188,8 @@ get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zip
 # Super Attract Mode
 echo "Getting Super Attract Mode from mrchrisster"
 get_addons MiSTer_SAM.zip https://github.com/mrchrisster/MiSTer_SAM/zipball/main/ MiSTer_SAM
-mv MiSTer_SAM .MiSTer_SAM
+mkdir .MiSTer_SAM
+mv MiSTer_SAM.sh MiSTer_SAM_init MiSTer_SAM_joy.sh MiSTer_SAM_joy_change.sh MiSTer_SAM_keyboard.sh MiSTer_SAM_mouse.sh MiSTer_SAM_now.sh .MiSTer_SAM
 
 
 
