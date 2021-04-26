@@ -18,7 +18,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="1.7"			#${SVERSION}
+SVERSION="1.8"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
