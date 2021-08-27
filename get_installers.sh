@@ -111,10 +111,13 @@ function get_addons2 {
 
 # Updaters
 
-#echo "Getting RetroDriven_Update_Suite"
+echo "Getting theypsilon update_all"
+get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
+
+#echo "Getting RetroDriven_Update_Suite" #obsolete
 #get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
 
-#echo "Getting RetroDriven_MAME_SE and .ini"
+#echo "Getting RetroDriven_MAME_SE and .ini" #obsolete
 #get_installers Update_RetroDriven_MAME_SE.sh https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.sh
 #get_installers Update_RetroDriven_MAME_SE.ini https://raw.githubusercontent.com/RetroDriven/MiSTerMAME/master/Update_RetroDriven_MAME_SE.ini
 
@@ -122,12 +125,10 @@ echo "Getting RetroDriven Update_MiSTerWallpapers and .ini"
 get_installers Update_MiSTerWallpapers.sh https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.sh
 get_installers Update_MiSTerWallpapers.ini https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.ini
 
-#echo "Getting RetroDriven Update_MiSTerBIOS and .ini"
+#echo "Getting RetroDriven Update_MiSTerBIOS and .ini" #obsolete
 #get_installers Update_MiSTerBIOS.sh https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.sh
 #get_installers Update_MiSTerBIOS.ini https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.ini
 
-echo "Getting theypsilon update_all"
-get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
 
 
 # Installers
@@ -151,7 +152,7 @@ get_installers install_devilutionx.sh https://raw.githubusercontent.com/jayp76/M
 echo "Getting Boogerman Cannonball unofficial Port"
 get_installers get_cannonball.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cannonball.sh
 
-echo "Getting EXL/NX-Engine Cave Story Port"
+echo "Getting EXL/NX-Engine Cave Story Port (playable with Keyboard)"
 get_installers get_cave.sh https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_cave.sh
 
 # Help and FAQ documents
@@ -214,7 +215,7 @@ mv MiSTer_SAM_on.sh /media/fat/Scripts/MiSTer_SAM
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
 echo "MSU-1 core (tested working, read Instructions.txt)"
 get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
-#mv -R * ${BASE_DIR}
+cp -R -f * ${BASE_DIR}
 
 
 echo " "
