@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 1.9 - 2021-08-27 - added MSU1 core by dentnz (not official and latest core yet, but tested working)
 # Version 1.8 - 2021-04-26 - added Super Attract Mode from mrchrisster
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
 #			   - added NES Attract Mode
@@ -18,7 +19,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="1.8"			#${SVERSION}
+SVERSION="1.9"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -191,8 +192,10 @@ get_addons MiSTer_SAM.zip https://github.com/mrchrisster/MiSTer_SAM/zipball/main
 mkdir .MiSTer_SAM
 mv MiSTer_SAM.sh MiSTer_SAM_init MiSTer_SAM_joy.sh MiSTer_SAM_joy_change.sh MiSTer_SAM_keyboard.sh MiSTer_SAM_mouse.sh MiSTer_SAM_now.sh MiSTer_SAM_off.sh .MiSTer_SAM
 
-
-
+# MSU-1 core by dentnz (not official and latest core yet, but tested working)
+echo "MSU-1 core (tested working, read Instructions.txt)"
+get_addons MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip
+#mv -R * ${BASE_DIR}
 
 
 echo " "
