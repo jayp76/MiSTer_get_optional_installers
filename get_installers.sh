@@ -194,7 +194,7 @@ mv MiSTer_SAM.sh MiSTer_SAM_init MiSTer_SAM_joy.sh MiSTer_SAM_joy_change.sh MiST
 
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
 echo "MSU-1 core (tested working, read Instructions.txt)"
-get_addons MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip
+get_addons MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
 #mv -R * ${BASE_DIR}
 
 
