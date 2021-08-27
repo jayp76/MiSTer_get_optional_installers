@@ -3,8 +3,8 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
-# Version 1.9 - 2021-08-27 - added MSU1 core by dentnz (not official and latest core yet, but tested working)
-# Version 1.8 - 2021-04-26 - added Super Attract Mode from mrchrisster
+# Version 1.9 - 2021-08-27 - added MSU1 core by dentnz (not official and latest core yet, but tested working), simplyfied SAM download script section
+# Version 1.8 - 2021-04-26 - added Super Attract Mode (SAM) from mrchrisster
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
 #			   - added NES Attract Mode
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
@@ -162,7 +162,7 @@ echo "Getting flynnsbit eXoDOS Top 300 for ao486"
 get_installers AO486_Update_Top300_Pack.sh https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.sh
 get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.ini
 
-# more addons 
+# more addons MiSTer_SAM_on.sh
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
@@ -188,9 +188,7 @@ get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zip
 
 # Super Attract Mode
 echo "Getting Super Attract Mode from mrchrisster"
-get_addons MiSTer_SAM.zip https://github.com/mrchrisster/MiSTer_SAM/zipball/main/ MiSTer_SAM
-mkdir .MiSTer_SAM
-mv MiSTer_SAM.sh MiSTer_SAM_init MiSTer_SAM_joy.sh MiSTer_SAM_joy_change.sh MiSTer_SAM_keyboard.sh MiSTer_SAM_mouse.sh MiSTer_SAM_now.sh MiSTer_SAM_off.sh .MiSTer_SAM
+get_addons MiSTer_SAM_on.sh https://raw.githubusercontent.com/mrchrisster/MiSTer_SAM/main/MiSTer_SAM_on.sh MiSTer_SAM
 
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
 echo "MSU-1 core (tested working, read Instructions.txt)"
