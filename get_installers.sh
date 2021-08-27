@@ -92,6 +92,22 @@ function get_addons {
    #sleep 5
 }
 
+function get_addons2 {
+  echo " ======================================================================="
+  echo " Downloading Addons"
+
+
+  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
+   unzip -o ${BASE_DIR}/Scripts/${3}/${1}
+   rm ${BASE_DIR}/Scripts/${3}/${1}
+   echo " "
+   echo "***"
+   echo " "
+   #sleep 5
+}
+
+
 
 # Updaters
 
@@ -188,11 +204,16 @@ get_addons Attract_NES.zip https://github.com/mrchrisster/mister-nes-attract/zip
 
 # Super Attract Mode
 echo "Getting Super Attract Mode from mrchrisster"
-get_addons MiSTer_SAM_on.sh https://raw.githubusercontent.com/mrchrisster/MiSTer_SAM/main/MiSTer_SAM_on.sh MiSTer_SAM
+get_installers MiSTer_SAM_on.sh https://raw.githubusercontent.com/mrchrisster/MiSTer_SAM/main/MiSTer_SAM_on.sh
+if [ ! -d /media/fat/Scripts/MiSTer_SAM ]
+then
+        mkdir /media/fat/Scripts/MiSTer_SAM
+fi
+mv MiSTer_SAM_on.sh /media/fat/Scripts/MiSTer_SAM
 
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
 echo "MSU-1 core (tested working, read Instructions.txt)"
-get_addons MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
+get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
 #mv -R * ${BASE_DIR}
 
 
