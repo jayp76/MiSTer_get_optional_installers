@@ -3,6 +3,8 @@
 Put get_yarmus.sh in to your MiSTEr Scripts folder.
 https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.sh
 
+Put the get_yarmus.sh script into your MiSTEr Scriots folder (/media/fat/Scripts)
+
 <pre>
    _____  .__  ____________________           
   /     \ |__|/   _____/\__    ___/__________ 
