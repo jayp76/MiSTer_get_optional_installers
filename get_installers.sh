@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.0 - 2021-09-16 - added Downloader_MiSTer from theypsilon 
 # Version 1.9 - 2021-08-27 - added MSU1 core by dentnz (not official and latest core yet, but tested working), simplyfied SAM download script section
 # Version 1.8 - 2021-04-26 - added Super Attract Mode (SAM) from mrchrisster
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
@@ -113,6 +114,9 @@ function get_addons2 {
 
 echo "Getting theypsilon update_all"
 get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update_All_MiSTer/master/update_all.sh
+
+echo "Getting theypsilon Downloader_MiSTer"
+get_installers downloader.sh https://raw.githubusercontent.com/MiSTer-devel/Downloader_MiSTer/main/downloader.sh
 
 #echo "Getting RetroDriven_Update_Suite" #obsolete
 #get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
