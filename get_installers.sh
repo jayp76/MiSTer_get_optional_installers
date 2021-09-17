@@ -119,6 +119,7 @@ get_installers update_all.sh https://raw.githubusercontent.com/theypsilon/Update
 
 echo "Getting theypsilon Downloader_MiSTer"
 get_installers downloader.sh https://raw.githubusercontent.com/MiSTer-devel/Downloader_MiSTer/main/downloader.sh
+get_installers downloader.ini https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/MiSTer_downloader_example.ini
 
 #echo "Getting RetroDriven_Update_Suite" #obsolete
 #get_installers RetroDriven_Update_Suite.sh https://raw.githubusercontent.com/RetroDriven/MiSTerUpdateSuite/master/RetroDriven_Update_Suite.sh
