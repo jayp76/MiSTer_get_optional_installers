@@ -3,6 +3,8 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.1 - 2021-09-17 - added iniswitcher.sh by morfeus77, Retrodriven CRT Wallpapers, corrections, etc
+#			   - MiSTer Custom Aspect Ratios by meauxdal
 # Version 2.0 - 2021-09-16 - added Downloader_MiSTer from theypsilon 
 # Version 1.9 - 2021-08-27 - added MSU1 core by dentnz (not official and latest core yet, but tested working), simplyfied SAM download script section
 # Version 1.8 - 2021-04-26 - added Super Attract Mode (SAM) from mrchrisster
@@ -20,7 +22,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="1.9"			#${SVERSION}
+SVERSION="2.1"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -129,6 +131,10 @@ echo "Getting RetroDriven Update_MiSTerWallpapers and .ini"
 get_installers Update_MiSTerWallpapers.sh https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.sh
 get_installers Update_MiSTerWallpapers.ini https://raw.githubusercontent.com/RetroDriven/MiSTerWallpapers/master/Update_MiSTerWallpapers.ini
 
+echo "Getting RetroDriven MiSTer-CRT-Wallpapers and .ini"
+get_installers Update_MiSTer-CRT-Wallpapers.sh https://raw.githubusercontent.com/RetroDriven/MiSTer-CRT-Wallpapers/main/Update_MiSTer-CRT-Wallpapers.sh
+get_installers Update_MiSTer-CRT-Wallpapers.ini https://raw.githubusercontent.com/RetroDriven/MiSTer-CRT-Wallpapers/main/Update_MiSTer-CRT-Wallpapers.ini
+
 #echo "Getting RetroDriven Update_MiSTerBIOS and .ini" #obsolete
 #get_installers Update_MiSTerBIOS.sh https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.sh
 #get_installers Update_MiSTerBIOS.ini https://raw.githubusercontent.com/RetroDriven/MiSTerBIOS/master/Update_MiSTerBIOS.ini
@@ -176,14 +182,15 @@ get_Wiki MISTer_Manual.pdf https://raw.githubusercontent.com/adreeve/MiSTerManua
 
 # Arcade Organizer
 echo "Getting theypsilon update_arcade-organizer"
-get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
+#get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
+get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/theypsilon/_arcade-organizer/master/update_arcade-organizer.sh
 
 # flynnsbit eXoDOS Top 300
 echo "Getting flynnsbit eXoDOS Top 300 for ao486"
 get_installers AO486_Update_Top300_Pack.sh https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.sh
 get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/flynnsbit/Top300_updates/main/_mister/AO486_Update_Top300_Pack.ini
 
-# more addons MiSTer_SAM_on.sh
+# more addons 
 
 # xow_Mister 
 echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
@@ -221,6 +228,15 @@ echo "MSU-1 core (tested working, read Instructions.txt)"
 get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
 cp -R -f * ${BASE_DIR}
 
+# iniswitcher.sh by morfeus77
+echo "iniswitcher.sh by morfeus77"
+get_installers iniswitcher.sh https://raw.githubusercontent.com/morfeus77/MiSTerTools/main/iniswitcher.sh
+
+# MiSTer Custom Aspect Ratios by meauxdal
+echo "MiSTer Custom Aspect Ratios by meauxdal, please check README.md"
+get_addons MiSTer_custom_aspect_ratios.zip https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios/zipball/main/MiSTer_custom_aspect_ratios
+
+
 
 echo " "
 echo "***"
@@ -238,5 +254,22 @@ echo " /    Y    \  |/        \  |    |\  ___/|  | \/"
 echo " \____|__  /__/_______  /  |____| \___  >__|   "
 echo "         \/           \/              \/       "
 echo " ======================================================================="
+
+# Resources used:
+# https://github.com/MiSTer-devel
+# https://github.com/morfeus77/MiSTerTools
+# https://github.com/mrchrisster/MiSTer_SAM
+# https://github.com/adreeve/MiSTerManual
+# https://github.com/Mellified/MiSTer_Duke
+# https://github.com/mrchrisster/mister-arcade-attract
+# https://github.com/retrobrews/installers
+# https://github.com/misterkun-io/MiSTer_DeViL
+# https://github.com/flynnsbit/Top300_updates
+# https://github.com/theypsilon/Update_All_MiSTer
+# https://github.com/MiSTer-devel/xow_MiSTer
+# https://pastebin.com/raw/pM1XMe5E
+# https://github.com/bbond007
+# https://github.com/RetroDriven/MiSTerWallpapers
+# https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios
 
 exit 0
