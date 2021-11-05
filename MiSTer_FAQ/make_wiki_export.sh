@@ -8,6 +8,9 @@ rm -rf *
 wget https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/misterkun_logo.png
 
 git clone https://github.com/MiSTer-devel/Main_MiSTer.wiki.git
+# Workaround
+touch ./Main_MiSTer.wiki/Arcade-Cores-Top
+touch ./Main_MiSTer.wiki/Arcade-Cores-Bottom
 
 gwtc -v -t "MiSTer Wiki" --logo-img misterkun_logo.png -n MiSTer_Wiki ./Main_MiSTer.wiki
 
