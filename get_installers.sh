@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.2 - 2021-10-05 - added Arcade Offset by atrac17
 # Version 2.1 - 2021-09-17 - added iniswitcher.sh by morfeus77, Retrodriven CRT Wallpapers, corrections, etc
 #			   - MiSTer Custom Aspect Ratios by meauxdal
 # Version 2.0 - 2021-09-16 - added Downloader_MiSTer from theypsilon 
@@ -22,7 +23,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="2.1"			#${SVERSION}
+SVERSION="2.2"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -185,6 +186,10 @@ get_Wiki MISTer_Manual.pdf https://raw.githubusercontent.com/adreeve/MiSTerManua
 echo "Getting theypsilon update_arcade-organizer"
 #get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
 get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/theypsilon/_arcade-organizer/master/update_arcade-organizer.sh
+
+# Arcade Offset
+echo "Getting atrac17 Arcade Offset"
+get_installers arcade_offset_update.sh https://raw.githubusercontent.com/atrac17/Arcade_Offset/main/arcade_offset_update.sh
 
 # flynnsbit eXoDOS Top 300
 echo "Getting flynnsbit eXoDOS Top 300 for ao486"
