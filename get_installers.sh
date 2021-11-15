@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.3 - 2021-11-15 - added MiSTer_WebMenu by nilp0inter
 # Version 2.2 - 2021-10-05 - added Arcade Offset by atrac17
 # Version 2.1 - 2021-09-17 - added iniswitcher.sh by morfeus77, Retrodriven CRT Wallpapers, corrections, etc
 #			   - MiSTer Custom Aspect Ratios by meauxdal
@@ -12,10 +13,10 @@
 # Version 1.7 - 2021-04-13 - added Mister Attract Mode from mrchrisster (Arcade, Genesis, Mega CD, Neo Geo, SNES, TurboGrafx-16 CD AKA PC Engine CD)
 #			   - added NES Attract Mode
 # Version 1.6 - 2021-04-06 - added MiSTer Manual from adreeve
-# Version 1.5c - 2021-04-06 - Code optimizations and some stuff deactivated
-# Version 1.5b - 2021-04-06 - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
-# Version 1.5a - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
-# Version 1.5 - 2021-03-31 - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
+# 			   - Code optimizations and some stuff deactivated
+#			   - added MiSTer_Duke Hyperkin Duke controller support for the MiSTer FPGA
+# Version 1.5 - 2021-03-31 - added xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer
+# 			   - added Mister Arcade Attract Mode and AO486_Update_Top300_Pack.ini
 # Version 1.4 - 2021-01-28 - added flynnsbit eXoDOS Top 300 for ao486
 # Version 1.3 - 2020-10-12 - added NX-Engine Cave Story port
 # Version 1.2 - 2020-09-30 - added DevilutionX and Cannonball Ports, Best practice help text
@@ -23,7 +24,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="2.2"			#${SVERSION}
+SVERSION="2.3"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -64,6 +65,18 @@ function get_installers {
 
   [[ -d ${BASE_DIR}/Scripts/installers ]] || mkdir -p ${BASE_DIR}/Scripts/installers ; cd ${BASE_DIR}/Scripts/installers
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
+   echo " "
+   echo "***"
+   echo " "
+}
+
+function get_std {
+  echo " ======================================================================="
+  echo " Downloading ${3}..."
+
+
+  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
    echo " "
    echo "***"
    echo " "
@@ -242,6 +255,9 @@ get_installers iniswitcher.sh https://raw.githubusercontent.com/morfeus77/MiSTer
 echo "MiSTer Custom Aspect Ratios by meauxdal, please check README.md"
 get_addons MiSTer_custom_aspect_ratios.zip https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios/zipball/main/MiSTer_custom_aspect_ratios
 
+# MiSTer_WebMenu by nilp0inter
+echo "Getting MiSTer_WebMenu"
+get_std webmenu.sh https://raw.githubusercontent.com/nilp0inter/MiSTer_WebMenu/releases/download/v0.5.0/webmenu.sh MiSTer_WebMenu
 
 
 echo " "
