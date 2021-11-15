@@ -267,6 +267,7 @@ echo " "
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
 echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified, adreeve"
+echo " nilp0inter and many more."
 echo " "
 
 echo "    _____  .__  ____________________           "
@@ -293,5 +294,6 @@ echo " ======================================================================="
 # https://github.com/bbond007
 # https://github.com/RetroDriven/MiSTerWallpapers
 # https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios
+# https://github.com/nilp0inter/MiSTer_WebMenu
 
 exit 0
