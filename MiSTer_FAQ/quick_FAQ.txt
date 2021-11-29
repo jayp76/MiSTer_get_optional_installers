@@ -1,0 +1,44 @@
+MiSTer Quick FAQ's (from Wiki)
+
+[FOLDERS]
+Folder Structure for needed files like BIOS, etc.
+Here an Example for X68000 core:
+RBF -> /media/fat/_Computer or other Folder on /media/fat/
+BIOS -> /media/fat/bootrom/X68000.bin or /media/fat/X68000/boot.rom
+Games -> /media/fat/Games/X68000
+
+Current Arcade Core structure:
+Cores -> /media/fat/_Arcade/cores
+MRA -> /media/fat/_Arcade/
+ROMS -> /media/fat/games/mame
+
+[RAM]
+https://github.com/MiSTer-devel/Main_MiSTer/wiki/Cores-that-use-SDRAM
+
+Cores that need 128MB SDRAM
+NeoGeo
+
+[ADC]
+https://github.com/MiSTer-devel/Main_MiSTer/wiki/Cores-Supporting-ADC
+
+[RTC]
+https://github.com/MiSTer-devel/Main_MiSTer/wiki/Cores-supporting-RTC
+
+[BIOS]
+SYSTEMS_WITH_BIOS=( \
+    AO486 \
+    Astrocade \
+    AtariLynx \
+    GAMEBOY \
+    GBA \
+    Intellivision \
+    Interact \
+    MegaCD \
+    NeoGeo \
+    NES \
+    SNES \
+    TGFX16 \
+    WonderSwan \
+)
+
+https://raw.githubusercontent.com/theypsilon/MiSTer_BIOS_SCRIPTS/master/bios-getter.sh
