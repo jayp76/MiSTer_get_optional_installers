@@ -18,6 +18,9 @@ https://github.com/MiSTer-devel/Main_MiSTer/wiki/Cores-that-use-SDRAM
 Cores that need 128MB SDRAM
 NeoGeo
 
+Cores needing 2 RAM Sticks
+PSX (optional)
+
 [ADC]
 https://github.com/MiSTer-devel/Main_MiSTer/wiki/Cores-Supporting-ADC
 
