@@ -14,7 +14,7 @@ touch ./Main_MiSTer.wiki/Arcade-Cores-Bottom
 
 gwtc -v -t "MiSTer Wiki" --logo-img misterkun_logo.png -n MiSTer_Wiki ./Main_MiSTer.wiki
 
-# gwtc -v -f pdf -t "MiSTer Wiki" --logo-img misterkun_logo.png -n MiSTer_Wiki_"`date +%F`" ./Main_MiSTer.wiki
+# gwtc -v -f pdf -t "MiSTer Wiki" --logo-img misterkun_logo.png --pdf-page-count -n MiSTer_Wiki_"`date +%F`" ./Main_MiSTer.wiki
 
 xz -z -v *.html
 
