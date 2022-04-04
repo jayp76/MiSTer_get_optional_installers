@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.4 - 2022-04-04 - now that MiSTer has "docs" support (.md, .txt, .pdf) i moved the cheatsheet and wiki/manual to docs folder.
 # Version 2.3 - 2021-11-15 - added MiSTer_WebMenu by nilp0inter
 # Version 2.2 - 2021-10-05 - added Arcade Offset by atrac17
 # Version 2.1 - 2021-09-17 - added iniswitcher.sh by morfeus77, Retrodriven CRT Wallpapers, corrections, etc
@@ -84,10 +85,10 @@ function get_std {
 
 function get_Wiki {
   echo " ======================================================================="
-  echo " Downloading Wiki into Help folder"
+  echo " Downloading Wiki into "docs" folder"
 
 
-  [[ -d ${BASE_DIR}/#help ]] || mkdir -p ${BASE_DIR}/#help ; cd ${BASE_DIR}/#help
+  [[ -d ${BASE_DIR}/docs ]] || mkdir -p ${BASE_DIR}/docs ; cd ${BASE_DIR}/docs
    curl ${CURL_RETRY} --insecure -o ${1} ${2}
    echo " "
    echo "***"
@@ -186,11 +187,14 @@ echo "Getting Wiki as HTML"
 get_Wiki MiSTer_Wiki.html.xz https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki.html.xz
 /bin/xz -d -v -f MiSTer_Wiki.html.xz
 
+echo "Getting Wiki as PDF"
+get_Wiki MiSTer_Wiki.pdf https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Wiki.pdf
+
 echo "Get Best Practice tips into your #help folder"
 get_Wiki MiSTer_Best_Practice_for_installing_and_updating.txt https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/MiSTer_FAQ/MiSTer_Best_Practice_for_installing_and_updating.txt
 
 echo "-=MiSTer Computer Cheat Sheet FAQ by Owlnonymous=-"
-curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/#help/cheatsheet_$(date +"%Y_%m_%d").txt
+curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/docs/cheatsheet_$(date +"%Y_%m_%d").txt
 
 echo "MiSTer Manual from adreeve"
 get_Wiki MISTer_Manual.pdf https://raw.githubusercontent.com/adreeve/MiSTerManual/master/MISTer%20Manual.pdf
