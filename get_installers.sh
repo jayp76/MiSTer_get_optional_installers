@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.5 - 2022-04-28 - added bgm.sh and favorites.sh from wizzomafizzo
 # Version 2.4 - 2022-04-04 - now that MiSTer has "docs" support (.md, .txt, .pdf) i moved the cheatsheet and wiki/manual to docs folder.
 # Version 2.3 - 2021-11-15 - added MiSTer_WebMenu by nilp0inter
 # Version 2.2 - 2021-10-05 - added Arcade Offset by atrac17
@@ -25,7 +26,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="2.3"			#${SVERSION}
+SVERSION="2.5"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -263,6 +264,13 @@ get_addons MiSTer_custom_aspect_ratios.zip https://github.com/meauxdal/MiSTer_Cu
 echo "Getting MiSTer_WebMenu"
 get_std webmenu.sh https://raw.githubusercontent.com/nilp0inter/MiSTer_WebMenu/releases/download/v0.5.0/webmenu.sh MiSTer_WebMenu
 
+# BGM by wizzomafizzo
+echo "Getting bgm.sh"
+get_addons bgm.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_BGM/main/bgm.sh
+
+# Favorites by wizzomafizzo
+echo "Getting favortites.sh"
+get_addons favortites.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
 
 echo " "
 echo "***"
@@ -271,7 +279,7 @@ echo " "
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
 echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified, adreeve"
-echo " nilp0inter and many more."
+echo " nilp0inter, wizzomafizzo and many more."
 echo " "
 
 echo "    _____  .__  ____________________           "
@@ -299,5 +307,6 @@ echo " ======================================================================="
 # https://github.com/RetroDriven/MiSTerWallpapers
 # https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios
 # https://github.com/nilp0inter/MiSTer_WebMenu
+# https://github.com/wizzomafizzo
 
 exit 0
