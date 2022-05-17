@@ -3,6 +3,8 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.6 - 2022-05-17 - removed(uncommented) old MSU1 core due to official MSU1 release
+#			   - removed xow driver due to official xow and xone support in latest MiSTer kernel 
 # Version 2.5 - 2022-04-28 - added bgm.sh and favorites.sh from wizzomafizzo
 # Version 2.4 - 2022-04-04 - now that MiSTer has "docs" support (.md, .txt, .pdf) i moved the cheatsheet and wiki/manual to docs folder.
 # Version 2.3 - 2021-11-15 - added MiSTer_WebMenu by nilp0inter
@@ -217,9 +219,9 @@ get_installers AO486_Update_Top300_Pack.ini https://raw.githubusercontent.com/fl
 # more addons 
 
 # xow_Mister 
-echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
-get_addons xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
-mv xow xow_init_script ${BASE_DIR}/linux
+# echo "Getting xow_Mister Linux driver for the Xbox One wireless dongle compiled for MiSTer"
+# get_addons xow.zip https://github.com/MiSTer-devel/xow_MiSTer/zipball/main/ xow
+# mv xow xow_init_script ${BASE_DIR}/linux
 
 # MiSTer_Duke
 echo "Getting Hyperkin Duke controller support for the MiSTer FPGA"
@@ -248,9 +250,9 @@ fi
 mv MiSTer_SAM_on.sh /media/fat/Scripts/MiSTer_SAM
 
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
-echo "MSU-1 core (tested working, read Instructions.txt)"
-get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
-cp -R -f * ${BASE_DIR}
+# echo "MSU-1 core (tested working, read Instructions.txt)"
+# get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
+# cp -R -f * ${BASE_DIR}
 
 # iniswitcher.sh by morfeus77
 echo "iniswitcher.sh by morfeus77"
