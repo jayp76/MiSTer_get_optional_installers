@@ -8,7 +8,8 @@ https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/g
 
 Put the get_yarmus.sh script into your MiSTer Scripts folder (/media/fat/Scripts)
 
-For latests MiSTer.ini example file download, put following lines at the end of your downloader.ini:
+For latests MiSTer.ini example file download, put following lines at the end of your downloader.ini.
+It will be stored in "/media/fat/docs": <br>
 [latest_MiSTer_ini_example]
 db_url = 'https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/latest_MiSTer_ini_example.json'
 
