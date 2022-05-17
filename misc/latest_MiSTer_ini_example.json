@@ -2,7 +2,7 @@
     "base_files_url": "",
     "db_files": [],
     "db_id": "latest_MiSTer_ini_example",
-    "db_url": "https://raw.githubusercontent.com/wizzomafizzo/MiSTer_GamesMenu/main/latest_MiSTer_ini_example.json",
+    "db_url": "https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/latest_MiSTer_ini_example.json",
     "default_options": {},
     "files": {
         "docs/latest_MiSTer_ini_example.txt": {
