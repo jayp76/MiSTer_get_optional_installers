@@ -6,7 +6,11 @@ It includes Help Files/Manuals, Ports, Tools/Utilities.
 Put get_yarmus.sh in to your MiSTer Scripts folder.
 https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.sh
 
-Put the get_yarmus.sh script into your MiSTEr Scriots folder (/media/fat/Scripts)
+Put the get_yarmus.sh script into your MiSTer Scripts folder (/media/fat/Scripts)
+
+For latests MiSTer.ini example file download, put following lines at the end of your downloader.ini:
+[latest_MiSTer_ini_example]
+db_url = 'https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/latest_MiSTer_ini_example.json'
 
 <pre>
    _____  .__  ____________________           
