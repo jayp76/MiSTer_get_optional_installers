@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.7 - 2022-04-28 - added GamesMenu from wizzomafizzo
 # Version 2.6 - 2022-05-17 - removed(uncommented) old MSU1 core due to official MSU1 release
 #			   - removed xow driver due to official xow and xone support in latest MiSTer kernel 
 # Version 2.5 - 2022-04-28 - added bgm.sh and favorites.sh from wizzomafizzo
@@ -28,7 +29,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="2.5"			#${SVERSION}
+SVERSION="2.7"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -273,6 +274,10 @@ get_addons bgm.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_BGM/main
 # Favorites by wizzomafizzo
 echo "Getting favortites.sh"
 get_addons favortites.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
+
+# GemsMenu by wizzomafizzo
+echo "Getting games_menu.sh"
+get_addons games_menu.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
 
 echo " "
 echo "***"
