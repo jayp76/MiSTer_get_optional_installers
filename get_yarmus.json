@@ -2,7 +2,7 @@
     "base_files_url": "",
     "db_files": [],
     "db_id": "get_yarmus",
-    "db_url": "https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_yarmus.json",
+    "db_url": "https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.json",
     "default_options": {},
     "files": {
         "Scripts/get_yarmus.sh": {
