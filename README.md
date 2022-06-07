@@ -10,7 +10,7 @@ Put the get_yarmus.sh script into your MiSTer Scripts folder (/media/fat/Scripts
 or <br>
 Put following lines at the end of your downloder.ini:<br>
 [get_yarmus] <br>
-db_url = 'https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/misc/get_yarmus.json' <br>
+db_url = 'https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.json' <br>
 
 <pre>
    _____  .__  ____________________           
