@@ -3,6 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
+# Version 2.8 - 2022-09-12 - added Coin-Op script from funkycochise and MiSTer Distribution README for Download Filters
 # Version 2.7 - 2022-04-28 - added GamesMenu from wizzomafizzo
 # Version 2.6 - 2022-05-17 - removed(uncommented) old MSU1 core due to official MSU1 release
 #			   - removed xow driver due to official xow and xone support in latest MiSTer kernel 
@@ -29,7 +30,7 @@
 # Version 1.0 - 2020-07-03 - First commit
 
 BASE_DIR="/media/fat"  		#${BASE_DIR}
-SVERSION="2.7"			#${SVERSION}
+SVERSION="2.8"			#${SVERSION}
 URL="https://github.com"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -129,6 +130,21 @@ function get_addons2 {
    #sleep 5
 }
 
+function get_addons7z {
+  echo " ======================================================================="
+  echo " Downloading Addons"
+
+
+  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
+   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
+   7za e -o{3} ${BASE_DIR}/Scripts/${3}/${1}
+   rm ${BASE_DIR}/Scripts/${3}/${1}
+   echo " "
+   echo "***"
+   echo " "
+   #sleep 5
+}
+
 
 
 # Updaters
@@ -203,6 +219,9 @@ curl -ksLf https://pastebin.com/raw/pM1XMe5E > ${BASE_DIR}/docs/cheatsheet_$(dat
 echo "MiSTer Manual from adreeve"
 get_Wiki MISTer_Manual.pdf https://raw.githubusercontent.com/adreeve/MiSTerManual/master/MISTer%20Manual.pdf
 
+echo "MiSTer Distribution README for Download Filters"
+get_Wiki DownloadFiltersREADME.txt https://raw.githubusercontent.com/MiSTer-devel/Distribution_MiSTer/main/README.md
+
 # Arcade Organizer
 echo "Getting theypsilon update_arcade-organizer"
 #get_installers update_arcade-organizer.sh https://raw.githubusercontent.com/MAME-GETTER/_arcade-organizer/master/update_arcade-organizer.sh
@@ -250,6 +269,9 @@ then
 fi
 mv MiSTer_SAM_on.sh /media/fat/Scripts/MiSTer_SAM
 
+# Coin-Op Script
+get_addons7z Coin-OP.7z https://raw.githubusercontent.com/funkycochise/Coin-Op/main/complete_scripts.7z Coin-Op
+
 # MSU-1 core by dentnz (not official and latest core yet, but tested working)
 # echo "MSU-1 core (tested working, read Instructions.txt)"
 # get_addons2 MSU1_core.zip https://archive.org/download/mister-msu1-core/MSU1_core.zip MSU1_core
@@ -286,7 +308,7 @@ echo " "
 echo " ======================================================================="
 echo " Thanks goes to Locutus73, Retrodriven, theypsilon, bbond007, retrobrews"
 echo " Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified, adreeve"
-echo " nilp0inter, wizzomafizzo and many more."
+echo " nilp0inter, wizzomafizzo, funkycochise and many more."
 echo " "
 
 echo "    _____  .__  ____________________           "
@@ -315,5 +337,8 @@ echo " ======================================================================="
 # https://github.com/meauxdal/MiSTer_Custom_Aspect_Ratios
 # https://github.com/nilp0inter/MiSTer_WebMenu
 # https://github.com/wizzomafizzo
+# https://github.com/funkycochise/Coin-Op
+# https://github.com/MiSTer-devel/Distribution_MiSTer
+
 
 exit 0
