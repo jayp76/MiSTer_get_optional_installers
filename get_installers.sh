@@ -137,7 +137,7 @@ function get_addons7z {
 
   [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   7za e -o{3} ${BASE_DIR}/Scripts/${3}/${1}
+   7za x -y -o{3} ${BASE_DIR}/Scripts/${3}/${1}
    rm ${BASE_DIR}/Scripts/${3}/${1}
    echo " "
    echo "***"
@@ -291,15 +291,15 @@ get_std webmenu.sh https://raw.githubusercontent.com/nilp0inter/MiSTer_WebMenu/r
 
 # BGM by wizzomafizzo
 echo "Getting bgm.sh"
-get_addons bgm.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_BGM/main/bgm.sh
+get_installers bgm.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_BGM/main/bgm.sh
 
 # Favorites by wizzomafizzo
 echo "Getting favortites.sh"
-get_addons favortites.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
+get_installers favortites.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
 
 # GemsMenu by wizzomafizzo
 echo "Getting games_menu.sh"
-get_addons games_menu.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_Favorites/main/favorites.sh
+get_installers games_menu.sh https://raw.githubusercontent.com/wizzomafizzo/MiSTer_GamesMenu/main/games_menu.sh
 
 echo " "
 echo "***"
