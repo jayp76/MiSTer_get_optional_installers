@@ -137,7 +137,7 @@ function get_addons7z {
 
   [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
    curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   7za x -y -o{3} ${BASE_DIR}/Scripts/${3}/${1}
+   7zr x -y -o{3} ${BASE_DIR}/Scripts/${3}/${1}
    rm ${BASE_DIR}/Scripts/${3}/${1}
    echo " "
    echo "***"
