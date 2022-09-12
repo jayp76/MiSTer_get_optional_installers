@@ -3,7 +3,7 @@
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
 
-# Version 2.8 - 2022-09-12 - added Coin-Op script from funkycochise and MiSTer Distribution README for Download Filters
+# Version 2.8 - 2022-09-12 - added Coin-Op script from funkycochise and MiSTer Distribution README for Download Filters and MiSTerDOSBox
 # Version 2.7 - 2022-04-28 - added GamesMenu from wizzomafizzo
 # Version 2.6 - 2022-05-17 - removed(uncommented) old MSU1 core due to official MSU1 release
 #			   - removed xow driver due to official xow and xone support in latest MiSTer kernel 
@@ -190,6 +190,9 @@ get_installers PrBoom-Plus_Installer.sh https://raw.githubusercontent.com/bbond0
 
 echo "Getting bbond007 MiSTer_BasiliskII"
 get_installers Install_BasiliskII.sh https://raw.githubusercontent.com/bbond007/MiSTer_BasiliskII/master/Install_BasiliskII.sh
+
+echo "Getting bbond007 MiSTer_DOSBox"
+get_installers Install_MiSTer_DOSBox.sh https://raw.githubusercontent.com/bbond007/MiSTer_DOSBox/main/Install_DOSBox.sh
 
 echo "Getting DevilutionX from misterkun-io"
 echo "Put diabdat.mpq in Diablo folder. Optinally add \"vmode -r 640x480 rgb16\" to Diablo.sh in scripts folder."
