@@ -12,6 +12,11 @@ Put following lines at the end of your downloder.ini:<br>
 [get_yarmus] <br>
 db_url = 'https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.json' <br>
 
+
+Many thanks go to Locutus73, Retrodriven, theypsilon, bbond007, wizzomafizzo,
+Boogerman, Owlnonymous, EXL, flynnsbit, mrchrisster, Mellified, adreeve,
+nilp0inter, retrobrews, funkycochise and many more.
+
 <pre>
    _____  .__  ____________________           
   /     \ |__|/   _____/\__    ___/__________ 
