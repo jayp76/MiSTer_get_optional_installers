@@ -42,6 +42,7 @@ esac
 echo " Yarmus Version ${SVERSION} "
 sleep 4
 
+# basepath/Scripts/installers
 function get_installers {
   echo " ======================================================================="
   echo " Downloading installer scripts, please wait..."
@@ -54,6 +55,7 @@ function get_installers {
    echo " "
 }
 
+# basepath/Scripts/appname
 function get_std {
   echo " ======================================================================="
   echo " Downloading ${3}..."
@@ -66,6 +68,7 @@ function get_std {
    echo " "
 }
 
+# basepath/docs
 function get_Wiki {
   echo " ======================================================================="
   echo " Downloading Wiki into "docs" folder"
@@ -78,6 +81,7 @@ function get_Wiki {
    echo " "
 }
 
+# basepath/Scripts/appname + unzip
 function get_addons {
   echo " ======================================================================="
   echo " Downloading Addons"
@@ -93,21 +97,7 @@ function get_addons {
    #sleep 5
 }
 
-function get_addons2 {
-  echo " ======================================================================="
-  echo " Downloading Addons"
-
-
-  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -o ${BASE_DIR}/Scripts/${3}/${1}
-   rm ${BASE_DIR}/Scripts/${3}/${1}
-   echo " "
-   echo "***"
-   echo " "
-   #sleep 5
-}
-
+# basepath/Scripts/appname + 7z unzip
 function get_addons7z {
   echo " ======================================================================="
   echo " Downloading Addons"
