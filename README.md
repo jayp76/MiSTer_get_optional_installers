@@ -4,7 +4,10 @@ Installing and using is up to you and your needs. It might be useful for freshly
 It includes Help Files/Manuals, Ports, Tools/Utilities.
 
 Put get_yarmus.sh in to your MiSTer Scripts folder. <br>
-https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.sh <br>
+https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/refactoring/get_yarmus.sh <br>
+
+Optional, you can put a local ini file next to the script. Without it a standard ini will be downloaded to /tmp. <br>
+https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini
 
 Put the get_yarmus.sh script into your MiSTer Scripts folder (/media/fat/Scripts) <br>
 or <br>

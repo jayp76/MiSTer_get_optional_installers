@@ -25,7 +25,7 @@
 
 # ========= OPTIONS ==================
 URL="https://github.com"
-SCRIPT_URL="${URL}/jayp76/MiSTer_get_optional_installers/blob/master/get_installers.sh"
+SCRIPT_URL="${URL}/jayp76/MiSTer_get_optional_installers/blob/refactoring/yarmus_app.sh"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5 --silent --show-error"
 
 # ========= ADVANCED OPTIONS =========
