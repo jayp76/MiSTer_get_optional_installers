@@ -169,7 +169,7 @@ while IFS=, read -r skip_value function param2 param3 param4 param5; do
 done < "$ini_file"
 
 # cleanup
-rm -f /tmp/yarmus_config.ini
+#rm -f /tmp/yarmus_config.ini
 
 echo " "
 echo "***"
