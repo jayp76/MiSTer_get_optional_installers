@@ -90,7 +90,7 @@ function get_games {
 
   [[ -d ${BASE_DIR}/Scripts/Games/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Games/${1} ; cd ${BASE_DIR}/Scripts/Games/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   unzip -j -o ${BASE_DIR}/Scripts/Games/${1}/${2}
+   #unzip -j -o ${BASE_DIR}/Scripts/Games/${1}/${2}
    #rm ${BASE_DIR}/Scripts/Games/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
