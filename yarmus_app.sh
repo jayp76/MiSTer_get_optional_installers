@@ -156,6 +156,7 @@ while IFS=, read -r skip_value function param2 param3 param4 param5; do
     if [[ "$skip_value" == "true" ]]; then
         case "$function" in
             "get_installers") get_installers "$param2" "$param3" "$param4" ;;
+	    "get_games") get_std "$param2" "$param3" "$param4" ;;
             "get_std") get_std "$param2" "$param3" "$param4" ;;
             "get_Wiki") get_Wiki "$param2" "$param3" "$param4" ;;
             "get_addons") get_addons "$param2" "$param3" "$param4" ;;
