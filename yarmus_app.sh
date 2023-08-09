@@ -46,12 +46,12 @@ echo " "
 sleep 4
 
 # basepath/Scripts/installers
-function get_installers {
+function get_updaters {
   echo " ======================================================================="
   echo " Downloading installer scripts, please wait..."
 
 
-  [[ -d ${BASE_DIR}/Scripts/Installers ]] || mkdir -p ${BASE_DIR}/Scripts/Installers ; cd ${BASE_DIR}/Scripts/Installers
+  [[ -d ${BASE_DIR}/Scripts/Update_Scripts ]] || mkdir -p ${BASE_DIR}/Scripts/Update_Scripts ; cd ${BASE_DIR}/Scripts/Update_Scripts
    curl ${CURL_RETRY} --insecure -o ${2} ${3}
    echo "Processing: " ${2}
    echo "***"
@@ -59,12 +59,11 @@ function get_installers {
 }
 
 # basepath/Scripts/appname
-function get_std {
+function get_addons {
   echo " ======================================================================="
   echo " Downloading ${2}..."
 
-
-  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
+  [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    echo "Processing: " ${2}
    echo "***"
@@ -92,7 +91,7 @@ function get_games {
   [[ -d ${BASE_DIR}/Scripts/Games/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Games/${1} ; cd ${BASE_DIR}/Scripts/Games/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    unzip -j -o ${BASE_DIR}/Scripts/Games/${1}/${2}
-   rm ${BASE_DIR}/Scripts/Games/${1}/${2}
+   #rm ${BASE_DIR}/Scripts/Games/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
    echo " "
@@ -100,7 +99,7 @@ function get_games {
 }
 
 # basepath/Scripts/appname + unzip
-function get_addons {
+function get_addons_z {
   echo " ======================================================================="
   echo " Downloading Addons"
 
@@ -108,7 +107,7 @@ function get_addons {
   [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    unzip -j -o ${BASE_DIR}/Scripts/Addons/${1}/${2}
-   rm ${BASE_DIR}/Scripts/Addons/${1}/${2}
+   #rm ${BASE_DIR}/Scripts/Addons/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
    echo " "
@@ -119,7 +118,7 @@ function get_addons {
 
 
 # basepath/Scripts/appname + 7z unzip
-function get_addons7z {
+function get_addons_7z {
   echo " ======================================================================="
   echo " Downloading Addons"
 
@@ -157,9 +156,9 @@ fi
 while IFS=, read -r skip_value function param2 param3 param4 param5; do
     if [[ "$skip_value" == "true" ]]; then
         case "$function" in
-            "get_installers") get_installers "$param2" "$param3" "$param4" ;;
+            "get_updaters") get_installers "$param2" "$param3" "$param4" ;;
 	    "get_games") get_std "$param2" "$param3" "$param4" ;;
-            "get_std") get_std "$param2" "$param3" "$param4" ;;
+            #"get_std") get_std "$param2" "$param3" "$param4" ;;
             "get_Wiki") get_Wiki "$param2" "$param3" "$param4" ;;
             "get_addons") get_addons "$param2" "$param3" "$param4" ;;
             "get_addons7z") get_addons7z "$param2" "$param3" "$param4" ;;
