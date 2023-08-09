@@ -9,7 +9,8 @@
 BASE_DIR="/media/fat"  		#${BASE_DIR}
 SVERSION="1.0"			#${SVERSION}
 URL="https://github.com"
-YARMUSCONF=${URL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
+RAWURL="https://raw.githubusercontent.com"
+YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
 
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -51,7 +52,7 @@ function get_installers {
 
   [[ -d ${BASE_DIR}/Scripts/installers ]] || mkdir -p ${BASE_DIR}/Scripts/installers ; cd ${BASE_DIR}/Scripts/installers
    curl ${CURL_RETRY} --insecure -o ${2} ${3}
-   echo " "
+   echo "Processing: " ${2}
    echo "***"
    echo " "
 }
@@ -64,7 +65,7 @@ function get_std {
 
   [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   echo " "
+   echo "Processing: " ${2}
    echo "***"
    echo " "
 }
@@ -77,7 +78,7 @@ function get_Wiki {
 
   [[ -d ${BASE_DIR}/docs ]] || mkdir -p ${BASE_DIR}/docs ; cd ${BASE_DIR}/docs
    curl ${CURL_RETRY} --insecure -o ${2} ${3}
-   echo " "
+   echo "Processing: " ${2}
    echo "***"
    echo " "
 }
@@ -92,11 +93,27 @@ function get_addons {
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
    rm ${BASE_DIR}/Scripts/${1}/${2}
-   echo " "
+   echo "Processing: " ${2}
    echo "***"
    echo " "
    #sleep 5
 }
+
+function get_games {
+  echo " ======================================================================="
+  echo " Downloading Addons"
+
+
+  [[ -d ${BASE_DIR}/Scripts/Games/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Games/${1} ; cd ${BASE_DIR}/Scripts/Games/${1}
+   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
+   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
+   rm ${BASE_DIR}/Scripts/${1}/${2}
+   echo "Processing: " ${2}
+   echo "***"
+   echo " "
+   #sleep 5
+}
+
 
 # basepath/Scripts/appname + 7z unzip
 function get_addons7z {
@@ -108,7 +125,7 @@ function get_addons7z {
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    7zr x -y -o{3} ${BASE_DIR}/Scripts/${1}/${2}
    rm ${BASE_DIR}/Scripts/${1}/${2}
-   echo " "
+   echo "Processing: " ${2}
    echo "***"
    echo " "
    #sleep 5
@@ -133,9 +150,9 @@ fi
 while IFS=, read -r skip_value function param2 param3 param4 param5; do
     if [[ "$skip_value" == "true" ]]; then
         case "$function" in
-            "get_installers") get_installers "$param2" "$param3" ;;
-            "get_std") get_std "$param2" "$param3" ;;
-            "get_Wiki") get_Wiki "$param2" "$param3" ;;
+            "get_installers") get_installers "$param2" "$param3" "$param4" ;;
+            "get_std") get_std "$param2" "$param3" "$param4" ;;
+            "get_Wiki") get_Wiki "$param2" "$param3" "$param4" ;;
             "get_addons") get_addons "$param2" "$param3" "$param4" ;;
             "get_addons7z") get_addons7z "$param2" "$param3" "$param4" ;;
         esac
@@ -144,6 +161,8 @@ while IFS=, read -r skip_value function param2 param3 param4 param5; do
     fi
 done < "$ini_file"
 
+# cleanup
+rm -f /tmp/yarmus_config.ini
 
 echo " "
 echo "***"
