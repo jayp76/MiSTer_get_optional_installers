@@ -138,7 +138,9 @@ function get_addons7z {
 if [ -f "config.ini" ]; then
     ini_file="yarmus_config.ini"
 else
-	# wget/curl alternative config to tmp folder
+    # wget/curl alternative config to tmp folder
+    echo " Downloading Standardd ini file "
+    echo " "
     cd /tmp
     curl ${CURL_RETRY} --insecure -L -o yarmus_config.ini ${YARMUSCONF}
     if [ -f "/tmp/yarmus_config.ini" ]; then
