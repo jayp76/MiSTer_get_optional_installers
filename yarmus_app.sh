@@ -74,10 +74,10 @@ function get_std {
 # basepath/docs
 function get_Wiki {
   echo " ======================================================================="
-  echo " Downloading Wiki into "docs" folder"
+  echo " Downloading Wiki and FAQ's into "docs" folder"
 
 
-  [[ -d ${BASE_DIR}/docs ]] || mkdir -p ${BASE_DIR}/docs ; cd ${BASE_DIR}/docs
+  [[ -d ${BASE_DIR}/${1} ]] || mkdir -p ${BASE_DIR}/${1}  ; cd ${BASE_DIR}/${1} 
    curl ${CURL_RETRY} --insecure -o ${2} ${3}
    echo "Processing: " ${2}
    echo "***"
