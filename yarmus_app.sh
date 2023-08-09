@@ -42,6 +42,7 @@ case $? in
 esac
 
 echo " Yarmus Version ${SVERSION} "
+echo " "
 sleep 4
 
 # basepath/Scripts/installers
@@ -83,25 +84,9 @@ function get_Wiki {
    echo " "
 }
 
-# basepath/Scripts/appname + unzip
-function get_addons {
-  echo " ======================================================================="
-  echo " Downloading Addons"
-
-
-  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
-   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
-   rm ${BASE_DIR}/Scripts/${1}/${2}
-   echo "Processing: " ${2}
-   echo "***"
-   echo " "
-   #sleep 5
-}
-
 function get_games {
   echo " ======================================================================="
-  echo " Downloading Addons"
+  echo " Downloading Games "
 
 
   [[ -d ${BASE_DIR}/Scripts/Games/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Games/${1} ; cd ${BASE_DIR}/Scripts/Games/${1}
@@ -114,6 +99,24 @@ function get_games {
    #sleep 5
 }
 
+# basepath/Scripts/appname + unzip
+function get_addons {
+  echo " ======================================================================="
+  echo " Downloading Addons"
+
+
+  [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
+   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
+   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
+   rm ${BASE_DIR}/Scripts/${1}/${2}
+   echo "Processing: " ${2}
+   echo "***"
+   echo " "
+   #sleep 5
+}
+
+
+
 
 # basepath/Scripts/appname + 7z unzip
 function get_addons7z {
@@ -121,7 +124,7 @@ function get_addons7z {
   echo " Downloading Addons"
 
 
-  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
+  [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    7zr x -y -o{3} ${BASE_DIR}/Scripts/${1}/${2}
    rm ${BASE_DIR}/Scripts/${1}/${2}
