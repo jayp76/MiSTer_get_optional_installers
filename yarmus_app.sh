@@ -51,7 +51,7 @@ function get_installers {
   echo " Downloading installer scripts, please wait..."
 
 
-  [[ -d ${BASE_DIR}/Scripts/installers ]] || mkdir -p ${BASE_DIR}/Scripts/installers ; cd ${BASE_DIR}/Scripts/installers
+  [[ -d ${BASE_DIR}/Scripts/Installers ]] || mkdir -p ${BASE_DIR}/Scripts/Installers ; cd ${BASE_DIR}/Scripts/Installers
    curl ${CURL_RETRY} --insecure -o ${2} ${3}
    echo "Processing: " ${2}
    echo "***"
@@ -91,8 +91,8 @@ function get_games {
 
   [[ -d ${BASE_DIR}/Scripts/Games/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Games/${1} ; cd ${BASE_DIR}/Scripts/Games/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
-   rm ${BASE_DIR}/Scripts/${1}/${2}
+   unzip -j -o ${BASE_DIR}/Scripts/Games/${1}/${2}
+   rm ${BASE_DIR}/Scripts/Games/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
    echo " "
@@ -107,8 +107,8 @@ function get_addons {
 
   [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
-   rm ${BASE_DIR}/Scripts/${1}/${2}
+   unzip -j -o ${BASE_DIR}/Scripts/Addons/${1}/${2}
+   rm ${BASE_DIR}/Scripts/Addons/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
    echo " "
@@ -126,8 +126,8 @@ function get_addons7z {
 
   [[ -d ${BASE_DIR}/Scripts/Addons/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/Addons/${1} ; cd ${BASE_DIR}/Scripts/Addons/${1}
    curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
-   7zr x -y -o{3} ${BASE_DIR}/Scripts/${1}/${2}
-   rm ${BASE_DIR}/Scripts/${1}/${2}
+   7zr x -y -o{3} ${BASE_DIR}/Scripts/Addons/${1}/${2}
+   rm ${BASE_DIR}/Scripts/Addons/${1}/${2}
    echo "Processing: " ${2}
    echo "***"
    echo " "
