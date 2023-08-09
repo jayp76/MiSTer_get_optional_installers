@@ -10,6 +10,7 @@ BASE_DIR="/media/fat"  		#${BASE_DIR}
 SVERSION="1.0"			#${SVERSION}
 URL="https://github.com"
 YARMUSCONF=${URL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
+
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
 # test network and https by pinging the target website 
@@ -49,7 +50,7 @@ function get_installers {
 
 
   [[ -d ${BASE_DIR}/Scripts/installers ]] || mkdir -p ${BASE_DIR}/Scripts/installers ; cd ${BASE_DIR}/Scripts/installers
-   curl ${CURL_RETRY} --insecure -o ${1} ${2}
+   curl ${CURL_RETRY} --insecure -o ${2} ${3}
    echo " "
    echo "***"
    echo " "
@@ -58,11 +59,11 @@ function get_installers {
 # basepath/Scripts/appname
 function get_std {
   echo " ======================================================================="
-  echo " Downloading ${3}..."
+  echo " Downloading ${2}..."
 
 
-  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
+  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
+   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
    echo " "
    echo "***"
    echo " "
@@ -75,7 +76,7 @@ function get_Wiki {
 
 
   [[ -d ${BASE_DIR}/docs ]] || mkdir -p ${BASE_DIR}/docs ; cd ${BASE_DIR}/docs
-   curl ${CURL_RETRY} --insecure -o ${1} ${2}
+   curl ${CURL_RETRY} --insecure -o ${2} ${3}
    echo " "
    echo "***"
    echo " "
@@ -87,10 +88,10 @@ function get_addons {
   echo " Downloading Addons"
 
 
-  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   unzip -j -o ${BASE_DIR}/Scripts/${3}/${1}
-   rm ${BASE_DIR}/Scripts/${3}/${1}
+  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
+   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
+   unzip -j -o ${BASE_DIR}/Scripts/${1}/${2}
+   rm ${BASE_DIR}/Scripts/${1}/${2}
    echo " "
    echo "***"
    echo " "
@@ -103,10 +104,10 @@ function get_addons7z {
   echo " Downloading Addons"
 
 
-  [[ -d ${BASE_DIR}/Scripts/${3} ]] || mkdir -p ${BASE_DIR}/Scripts/${3} ; cd ${BASE_DIR}/Scripts/${3}
-   curl ${CURL_RETRY} --insecure -L -o ${1} ${2}
-   7zr x -y -o{3} ${BASE_DIR}/Scripts/${3}/${1}
-   rm ${BASE_DIR}/Scripts/${3}/${1}
+  [[ -d ${BASE_DIR}/Scripts/${1} ]] || mkdir -p ${BASE_DIR}/Scripts/${1} ; cd ${BASE_DIR}/Scripts/${1}
+   curl ${CURL_RETRY} --insecure -L -o ${2} ${3}
+   7zr x -y -o{3} ${BASE_DIR}/Scripts/${1}/${2}
+   rm ${BASE_DIR}/Scripts/${1}/${2}
    echo " "
    echo "***"
    echo " "
