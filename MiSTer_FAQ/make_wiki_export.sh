@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # https://github.com/yakivmospan/github-wikito-converter
 #sudo apt install wkhtmltopdf
+#https://github.com/yakivmospan/github-wikito-converter/issues/43
 set -o errexit
 set -o nounset
 
