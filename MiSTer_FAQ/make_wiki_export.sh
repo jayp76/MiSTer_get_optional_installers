@@ -1,5 +1,8 @@
 #!/bin/bash
 # https://github.com/yakivmospan/github-wikito-converter
+set -o errexit
+set -o nounset
+
 
 mkdir -p wiki_temp
 cd ./wiki_temp
