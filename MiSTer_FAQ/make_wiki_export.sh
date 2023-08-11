@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://github.com/yakivmospan/github-wikito-converter
 set -o errexit
 set -o nounset
