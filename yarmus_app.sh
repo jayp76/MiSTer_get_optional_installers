@@ -11,7 +11,7 @@ SVERSION="1.0"			#${SVERSION}
 URL="https://github.com"
 RAWURL="https://raw.githubusercontent.com"
 YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
-read -r SCRIPT_DIR
+read SCRIPT_DIR
 echo "Script_Dir: ${SCRIPT_DIR}"
 
 
