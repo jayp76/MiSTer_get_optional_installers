@@ -141,7 +141,7 @@ if [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ] ; then
     #echo "ini file: ${ini_file}"
 else
     # wget/curl alternative config to tmp folder
-    echo " XY Downloading Standard ini file "
+    echo " Using downloaded ini file "
     echo " "
     #cd /tmp
     #curl ${CURL_RETRY} --insecure -L -o yarmus_config.ini ${YARMUSCONF}
