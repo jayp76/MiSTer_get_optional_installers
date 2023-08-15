@@ -134,7 +134,7 @@ function get_addons_7z {
 }
 
 # Check if the primary ini file exists, if not, use the alternative ini file
-if [ -f "config.ini" ]; then
+if [ -f "yarmus_config.ini" ]; then
     echo " Using local ini file "
     echo " "
     ini_file="yarmus_config.ini"
