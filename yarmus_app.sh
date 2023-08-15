@@ -115,9 +115,6 @@ function get_addons_z {
    #sleep 5
 }
 
-
-
-
 # basepath/Scripts/appname + 7z unzip
 function get_addons_7z {
   echo " ======================================================================="
@@ -135,7 +132,7 @@ function get_addons_7z {
 }
 
 # Check if the primary ini file exists, if not, use the alternative ini file
-if [[ -f "yarmus_config.ini" ]] || [[ -f "${SCRIPTS_PATH}/yarmus_config.ini" ]]; then
+if [ -f "yarmus_config.ini" ] || [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ]; then
     echo " Using local ini file "
     echo " "
     ini_file="yarmus_config.ini"
@@ -149,7 +146,7 @@ else
     if [ -f "/tmp/yarmus_config.ini" ]; then
         ini_file="/tmp/yarmus_config.ini"
     else
-        echo "Error: Both config.ini and alternative_config.ini files not found!"
+        echo "Error: Local or temporary ini file not found!"
         exit 1
     fi
 fi
@@ -172,6 +169,11 @@ done < "$ini_file"
 
 # cleanup
 #rm -f /tmp/yarmus_config.ini
+if "${SCRIPTS_PATH}/yarmus_config.ini" ]]; then
+    echo " Clean Up "
+    echo " "
+    rm -f /tmp/yarmus_config.ini
+fi
 
 echo " "
 echo "***"
