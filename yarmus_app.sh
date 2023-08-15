@@ -133,10 +133,10 @@ function get_addons_7z {
 
 #echo "Script path: ${SCRIPTS_PATH}"
 # Check if the primary ini file exists, if not, use the alternative ini file
-if [ -f "${SCRIPTS_DIR}/yarmus_config.ini" ] ; then
+if [ -f "${SCRIPT_DIR}/yarmus_config.ini" ] ; then
     echo " Using local ini file "
     echo " "
-    ini_file="${SCRIPTS_DIR}/yarmus_config.ini"
+    ini_file="${SCRIPT_DIR}/yarmus_config.ini"
     #echo "Script path: ${SCRIPTS_PATH}"
     #echo "ini file: ${ini_file}"
 else
