@@ -139,6 +139,7 @@ if [[ -f "yarmus_config.ini" ]] || [[ -f "${SCRIPTS_PATH}/yarmus_config.ini" ]];
     echo " Using local ini file "
     echo " "
     ini_file="yarmus_config.ini"
+    echo ${ini_file}
 else
     # wget/curl alternative config to tmp folder
     echo " Downloading Standard ini file "
