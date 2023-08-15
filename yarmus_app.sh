@@ -11,7 +11,7 @@ SVERSION="1.0"			#${SVERSION}
 URL="https://github.com"
 RAWURL="https://raw.githubusercontent.com"
 YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
-SCRIPTS_PATH="/media/fat/Scripts"
+
 
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
 S_OPT="--silent"
@@ -133,10 +133,10 @@ function get_addons_7z {
 
 #echo "Script path: ${SCRIPTS_PATH}"
 # Check if the primary ini file exists, if not, use the alternative ini file
-if [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ] ; then
+if [ -f "${SCRIPTS_DIR}/yarmus_config.ini" ] ; then
     echo " Using local ini file "
     echo " "
-    ini_file="${SCRIPTS_PATH}/yarmus_config.ini"
+    ini_file="${SCRIPTS_DIR}/yarmus_config.ini"
     #echo "Script path: ${SCRIPTS_PATH}"
     #echo "ini file: ${ini_file}"
 else
