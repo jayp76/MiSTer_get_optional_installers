@@ -132,14 +132,14 @@ function get_addons_7z {
 }
 
 # Check if the primary ini file exists, if not, use the alternative ini file
-if [ -f "yarmus_config.ini" ] || [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ]; then
+if [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ] ; then
     echo " Using local ini file "
     echo " "
-    ini_file="yarmus_config.ini"
+    ini_file="${SCRIPTS_PATH}/yarmus_config.ini"
     echo ${ini_file}
 else
     # wget/curl alternative config to tmp folder
-    echo " Downloading Standard ini file "
+    echo " XY Downloading Standard ini file "
     echo " "
     cd /tmp
     curl ${CURL_RETRY} --insecure -L -o yarmus_config.ini ${YARMUSCONF}
