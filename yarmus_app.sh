@@ -136,7 +136,8 @@ if [ -f "${SCRIPTS_PATH}/yarmus_config.ini" ] ; then
     echo " Using local ini file "
     echo " "
     ini_file="${SCRIPTS_PATH}/yarmus_config.ini"
-    echo ${ini_file}
+    echo "Script path: ${SCRIPTS_PATH}"
+    echo "ini file: ${ini_file}"
 else
     # wget/curl alternative config to tmp folder
     echo " XY Downloading Standard ini file "
