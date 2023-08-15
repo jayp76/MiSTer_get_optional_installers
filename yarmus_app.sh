@@ -12,6 +12,7 @@ URL="https://github.com"
 RAWURL="https://raw.githubusercontent.com"
 YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
 read -r SCRIPT_DIR
+echo "Script_Dir: ${SCRIPT_DIR}
 
 
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
