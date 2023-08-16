@@ -14,7 +14,7 @@ YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_c
 SCRIPT_DIR="$1"
 
 
-CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5"
+CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5 --location"
 S_OPT="--silent"
 # test network and https by pinging the target website 
 SSL_SECURITY_OPTION=""
