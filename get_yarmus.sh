@@ -20,13 +20,16 @@
 # You can download the latest version of this script from:
 # https://github.com/jayp76/MiSTer_get_optional_installers
 
-# Version 1.0 - 2020-08-31 - First commit
+# Version 1.0 - 2023-08-15 - First commit
 
 
 # ========= OPTIONS ==================
 URL="https://github.com"
 SCRIPT_URL="${URL}/jayp76/MiSTer_get_optional_installers/blob/refactoring/yarmus_app.sh"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5 --silent --show-error"
+RAWURL="https://raw.githubusercontent.com"
+YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
+SCRIPTS_PATH="/media/fat/Scripts"
 
 # ========= ADVANCED OPTIONS =========
 # ALLOW_INSECURE_SSL="true" will check if SSL certificate verification (see https://curl.haxx.se/docs/sslcerts.html )
@@ -39,19 +42,46 @@ ALLOW_INSECURE_SSL="true"
 
 # ========= CODE STARTS HERE =========
 # get the name of the script, or of the parent script if called through a 'curl ... | bash -'
-ORIGINAL_SCRIPT_PATH="${0}"
-[[ "${ORIGINAL_SCRIPT_PATH}" == "bash" ]] && \
-	ORIGINAL_SCRIPT_PATH="$(ps -o comm,pid | awk -v PPID=${PPID} '$2 == PPID {print $1}')"
+#ORIGINAL_SCRIPT_PATH="${0}"
+#[[ "${ORIGINAL_SCRIPT_PATH}" == "bash" ]] && \
+#	ORIGINAL_SCRIPT_PATH="$(ps -o comm,pid | awk -v PPID=${PPID} '$2 == PPID {print $1}')"
+# echo "orig ${ORIGINAL_SCRIPT_PATH}"
 
 # ini file can contain user defined variables (as bash commands)
 # Load and execute the content of the ini file, if there is one
-INI_PATH="${ORIGINAL_SCRIPT_PATH%.*}.ini"
-if [[ -f "${INI_PATH}" ]] ; then
-	TMP=$(mktemp)
-	# preventively eliminate DOS-specific format and exit command  
-	dos2unix < "${INI_PATH}" 2> /dev/null | grep -v "^exit" > ${TMP}
-	source ${TMP}
-	rm -f ${TMP}
+#INI_PATH="${ORIGINAL_SCRIPT_PATH%.*}.ini"
+#SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+#echo ${INI_PATH}
+#echo ${SCRIPT_DIR}
+#if [[ -f "${SCRIPT_DIR}/${INI_PATH}" ]] ; then
+#	TMP=$(mktemp)
+#	# preventively eliminate DOS-specific format and exit command  
+#	dos2unix < "${SCRIPT_DIR}/${INI_PATH}" 2> /dev/null | grep -v "^exit" > ${TMP}
+#	source ${TMP}
+#	echo ${TMP}
+#	rm -f ${TMP}
+#fi
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+# Check if the primary ini file exists, if not, use the alternative ini file
+if [ -f "${SCRIPT_DIR}/yarmus_config.ini" ]; then
+    #echo " Using local ini file "
+    echo " "
+    #ini_file="${SCRIPTS_PATH}/yarmus_config.ini"
+    #echo "local: ${SCRIPT_DIR}/yarmus_config"
+else
+    # wget/curl alternative config to tmp folder
+    echo "No ini file found.!"
+    echo "Downloading ini file "
+    echo " "
+    cd /tmp
+    curl ${CURL_RETRY} --insecure -L -o yarmus_config.ini ${YARMUSCONF}
+    if [ -f "/tmp/yarmus_config.ini" ]; then
+        ini_file="/tmp/yarmus_config.ini"
+    else
+        echo "Error: Both config.ini and alternative_config.ini files not found!"
+        exit 1
+    fi
 fi
 
 # test network and https by pinging the target website 
@@ -80,8 +110,8 @@ case $? in
 		;;
 esac
 
-# download and execute the latest mister_updater.sh
-echo "Downloading and executing"
+# download and execute the latest script
+echo "Downloading and executing script"
 echo "${SCRIPT_URL/*\//}"
 echo ""
 curl \
@@ -90,7 +120,7 @@ curl \
 	--fail \
 	--location \
 	"${SCRIPT_URL}?raw=true" | \
-	bash -
+	bash -s "${SCRIPT_DIR}" 
 
 echo " "
 
