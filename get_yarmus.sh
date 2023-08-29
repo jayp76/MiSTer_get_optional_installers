@@ -25,10 +25,10 @@
 
 # ========= OPTIONS ==================
 URL="https://github.com"
-SCRIPT_URL="${URL}/jayp76/MiSTer_get_optional_installers/blob/refactoring/yarmus_app.sh"
+SCRIPT_URL="${URL}/jayp76/MiSTer_get_optional_installers/blob/master/yarmus_app.sh"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5 --silent --show-error"
 RAWURL="https://raw.githubusercontent.com"
-YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
+YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/master/yarmus_config.ini" 
 SCRIPTS_PATH="/media/fat/Scripts"
 
 # ========= ADVANCED OPTIONS =========
