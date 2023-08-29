@@ -1,2 +1,3 @@
-Check Source and deactivate/delete obsolete
-Check functions if they can be minimized 
+Check Source and deactivate/delete obsolete - done
+Check functions if they can be minimized - done
+Refactoring script with .ini file function - done
