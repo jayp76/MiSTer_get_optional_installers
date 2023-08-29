@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # GET YARMUS!!!!
 
 # This program is free software: you can redistribute it and/or modify
