@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Yet another random MiSTer utility script = YARMUS? LOL
 #
