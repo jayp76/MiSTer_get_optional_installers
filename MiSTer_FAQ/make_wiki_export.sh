@@ -1,7 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://github.com/yakivmospan/github-wikito-converter
+#sudo apt install wkhtmltopdf
+#https://github.com/yakivmospan/github-wikito-converter/issues/43
+set -o errexit
+set -o nounset
 
-mkdir wiki_temp
+
+mkdir -p wiki_temp
 cd ./wiki_temp
 rm -rf *
 
@@ -21,6 +26,6 @@ gwtc -v -t "MiSTer Wiki" --logo-img misterkun_logo.png -n MiSTer_Wiki ./Wiki_MiS
 #gwtc -v -f pdf -t "MiSTer Wiki" --logo-img misterkun_logo.png --pdf-page-count -n MiSTer_Wiki_"`date +%F`" ./Main_MiSTer.wiki
 gwtc -v -f pdf -t "MiSTer Wiki" --logo-img misterkun_logo.png --pdf-page-count -n MiSTer_Wiki_"`date +%F`" ./Wiki_MiSTer.wiki
 
-xz -z -v -e *.html
+#xz -z -v -e *.html
 
 #mv MiSTer_Wiki.html.xz MiSTer_Wiki_"`date +%F`".html.xz
