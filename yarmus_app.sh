@@ -10,7 +10,7 @@ BASE_DIR="/media/fat"  		#${BASE_DIR}
 SVERSION="1.0"			#${SVERSION}
 URL="https://github.com"
 RAWURL="https://raw.githubusercontent.com"
-YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/refactoring/yarmus_config.ini" 
+YARMUSCONF=${RAWURL}"/jayp76/MiSTer_get_optional_installers/master/yarmus_config.ini" 
 SCRIPT_DIR="$1"
 
 
