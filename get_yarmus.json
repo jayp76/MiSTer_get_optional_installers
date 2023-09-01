@@ -6,7 +6,7 @@
     "default_options": {},
     "files": {
         "Scripts/get_yarmus.sh": {
-			"hash": "d537c53a6fa8af8805ec008662883d5909275f55",
+	    "hash": "d537c53a6fa8af8805ec008662883d5909275f55",
             "size": 3220,
             "url": "https://raw.githubusercontent.com/jayp76/MiSTer_get_optional_installers/master/get_yarmus.sh"
         }
