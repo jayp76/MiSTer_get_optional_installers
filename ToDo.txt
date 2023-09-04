@@ -1,3 +1,4 @@
 Check Source and deactivate/delete obsolete - done
 Check functions if they can be minimized - done
 Refactoring script with .ini file function - done
+debug why json db install does not work anymore, in spite having the correct sha1sum
